@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99525af5-63fa-42e9-812e-78ac73583970" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tt.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/user.php" afterPath="$PROJECT_DIR$/application/classes/user.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/Autoloader.php" afterPath="$PROJECT_DIR$/application/libs/Autoloader.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/Smarty.class.php" afterPath="$PROJECT_DIR$/application/libs/Smarty.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/SmartyBC.class.php" afterPath="$PROJECT_DIR$/application/libs/SmartyBC.class.php" />
@@ -62,10 +60,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templatecompilerbase.php" afterPath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templatecompilerbase.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templatelexer.php" afterPath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templatelexer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templateparser.php" afterPath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templateparser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/requests/index.php" afterPath="$PROJECT_DIR$/application/requests/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/ready/352724bfa12a580c57b11c4c69ef5a30ae9a7234_0.file.head.tpl.php" afterPath="$PROJECT_DIR$/application/templates/ready/352724bfa12a580c57b11c4c69ef5a30ae9a7234_0.file.head.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/ready/8153968eac612233af7c5ebb39bbc7fe7330b8a4_0.file.authorization.tpl.php" afterPath="$PROJECT_DIR$/application/templates/ready/8153968eac612233af7c5ebb39bbc7fe7330b8a4_0.file.authorization.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/JavaScript/Table.js" afterPath="$PROJECT_DIR$/media/JavaScript/Table.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -145,7 +139,7 @@
         <entry file="file://$PROJECT_DIR$/media/JavaScript/Table.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -155,7 +149,7 @@
         <entry file="file://$PROJECT_DIR$/test.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+              <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -628,12 +622,20 @@
       <workItem from="1490607485433" duration="25000" />
       <workItem from="1490608054294" duration="1845000" />
       <workItem from="1490617539720" duration="29000" />
-      <workItem from="1490710042280" duration="348000" />
+      <workItem from="1490710042280" duration="408000" />
     </task>
+    <task id="LOCAL-00001" summary="version 0.4">
+      <created>1490710651966</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1490710651966</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49240000" />
+    <option name="totallyTimeSpent" value="49300000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2880" height="1620" extended-state="0" />
@@ -663,6 +665,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="version 0.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 0.4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1054,7 +1060,7 @@
     <entry file="file://$PROJECT_DIR$/media/JavaScript/Table.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1062,7 +1068,7 @@
     <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
           <folding />
         </state>
       </provider>
