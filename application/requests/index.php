@@ -20,7 +20,7 @@ if (isset($_POST['Auth'])) {
     $response->execute();
 } else if (isset($_POST['registration'])) {
     if (!$user->havePerm("not_registration")){
-        $user->registration($_POST['username'], $_POST['password'], $_POST['email'], $_POST['']);
+        $user->registration($_POST['username'], $_POST['password'], $_POST['email'], $_POST['d'],$_POST['d']);
     }else{
         $response = new Response("Вы не можете зарегистрироваться!", "", [], 2);
     }

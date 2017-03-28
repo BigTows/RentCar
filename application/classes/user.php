@@ -25,6 +25,12 @@ class User
         $this->getRoles();
     }
 
+    /**
+     * @param $name
+     * @param $password
+     * @param $session
+     * @return bool
+     */
     public function auth($name, $password, $session)
     {
         if (!$this->isLoggin) {
@@ -77,6 +83,13 @@ class User
         return in_array($perm, $this->permissions) && $this->isLoggin;
     }
 
+    /**
+     * @param $name
+     * @param $password
+     * @param $email
+     * @param $passport
+     * @param $phone
+     */
     public function registration($name,$password,$email,$passport,$phone){
         $Statement = $this->DBConnect->sendQuery("
         INSERT INTO `Users`(`login`, `password`, `first_name`, `second_name`, `phone`, `passport`) 

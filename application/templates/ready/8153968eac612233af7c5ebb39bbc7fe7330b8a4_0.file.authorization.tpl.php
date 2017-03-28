@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-18 09:40:44
+/* Smarty version 3.1.30, created on 2017-03-27 13:12:31
   from "/var/www/html/cars/application/templates/site/authorization.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58ccd66c3c1537_87533239',
+  'unifunc' => 'content_58d8e58f9328b9_31397476',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8153968eac612233af7c5ebb39bbc7fe7330b8a4' => 
     array (
       0 => '/var/www/html/cars/application/templates/site/authorization.tpl',
-      1 => 1489819243,
+      1 => 1490609285,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:container.tpl' => 1,
   ),
 ),false)) {
-function content_58ccd66c3c1537_87533239 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58d8e58f9328b9_31397476 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -87,6 +87,15 @@ function content_58ccd66c3c1537_87533239 (Smarty_Internal_Template $_smarty_tpl)
             </div>
         </div>
     </div>
+    <?php echo '<script'; ?>
+>
+        new Binding({
+
+        },function () {
+            alert("Yeap");
+        })
+    <?php echo '</script'; ?>
+>
 <?php $_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);
 ?>
 
