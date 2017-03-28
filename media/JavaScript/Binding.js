@@ -19,6 +19,7 @@ class Binding {
         }
         this.xhr.onreadystatechange = function () {
             if (this.status == 200 && this.readyState == 4) {
+                console.log(this.responseText);
                 var responseJSON = JSON.parse(this.responseText);
                 if (obj.responsePanel!=undefined) printResponse(responseJSON, obj.responsePanel);
                 if (responseJSON.level == 0) success(responseJSON.data);
@@ -30,6 +31,9 @@ class Binding {
 }
 
 function printResponse(json, element) {
+    if (element==undefined){
+        return;
+    }
     element.innerHTML = "";
     var styleClass = "alert alert-";
     switch (json.level) {

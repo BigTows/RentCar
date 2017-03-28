@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-15 12:41:16
+/* Smarty version 3.1.30, created on 2017-03-28 20:42:17
   from "/var/www/html/cars/application/templates/adminpanel/cars/brand.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58c90c3c370171_34066748',
+  'unifunc' => 'content_58daa0795c2e88_86991752',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a9816b6ab586fb04b56e46508b5ee98195b23359' => 
     array (
       0 => '/var/www/html/cars/application/templates/adminpanel/cars/brand.tpl',
-      1 => 1489570875,
+      1 => 1490722936,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58c90c3c370171_34066748 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58daa0795c2e88_86991752 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
  <div class="form-group">
         <label for="name">Добавить новый Брэнд</label>
@@ -43,24 +43,13 @@ function content_58c90c3c370171_34066748 (Smarty_Internal_Template $_smarty_tpl)
             data: ["name","addRecord"],
 
         },function () {
-            init();
+            initBrands();
         });
     });
-    function init() {
-        new Binding({
-            url: "../application/requests/index.php",
-            action: "getTable",
-            data: [],
-            dataValue: {
-                "getTable": "Brands"
-            }
-        }, function (data) {
-            //replace this line
-            document.getElementById("brandTable").innerHTML="";
-            jsonToTable(data, document.getElementById("brandTable"));
-        })
+    function initBrands() {
+        new Table("Brands",document.getElementById("brandTable"));
     }
-    init();
+    initBrands();
 <?php echo '</script'; ?>
 ><?php }
 }

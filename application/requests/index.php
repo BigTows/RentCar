@@ -41,28 +41,61 @@ if (isset($_POST['Auth'])) {
     if ($user->havePerm("insert_" . strtolower($_POST['addRecord']))) {
         $input = "";
         $values = "";
+        $valuesArray = [];
         foreach ($_POST as $item => $key) {
             if ($item != "addRecord") {
                 $input = $input . "`" . $item . "`,";
-                $values = $values . "'" . $key . "',";
+                $values = $values . ":" . $item . ",";
+                $valuesArray+=array($item=>$key);
             }
         }
         $input = rtrim($input, ",");
         $values = rtrim($values, ",");
 
         $querySQL = "INSERT INTO " . $_POST['addRecord'] . " (" . $input . ") VALUES (" . $values . ")";
-        $statement = $DBConnect->sendQuery($querySQL);
+        $statement = $DBConnect->sendQuery($querySQL,$valuesArray);
         if ($DBConnect->hasError()) {
             $response = new Response("Произошла ошибка", $statement->errorInfo(), [], 2);
         } else {
-            $response = new Response("Запись добавлена!", "", [], 0);
+            $response = new Response("Запись добавлена!","",[], 0);
         }
 
     } else {
         $response = new Response("У вас нет прав на таблицу: " . $_POST['addRecord'] . "!", "", [], 2);
     }
     $response->execute();
-} else {
+} else if (isset($_POST['editRecord'])){
+    $querySQL="";
+    if ($user->havePerm("edit_" . strtolower($_POST['editRecord']))) {
+        $newDate ="";
+        $oldData ="";
+        $valuesArray = [];
+        $newDataArray = json_decode($_POST['newData'],true);
+        $oldDataArray = json_decode($_POST['oldData'],true);
+
+        foreach ($newDataArray as $item => $key){
+            $newDate=$newDate."`$item` = :new".$item.",";
+            $oldData=$oldData."`$item` = :".$item." AND";
+            $valuesArray+=array("new".$item=>$key);
+        }
+        foreach ($oldDataArray as $item => $key){
+            $valuesArray+=array($item=>$key);
+        }
+        $newDate = rtrim($newDate, ",");
+        $oldData = rtrim($oldData, "AND");
+        //$input = rtrim($input, ",");
+        $querySQL = "UPDATE ".$_POST['editRecord']. " SET " . $newDate . " WHERE " . $oldData . "";
+        $statement = $DBConnect->sendQuery($querySQL,$valuesArray);
+        if ($DBConnect->hasError()) {
+            $response = new Response("Произошла ошибка", $statement->errorInfo(), [], 2);
+        } else {
+            $response = new Response("Запись изменена!","",[], 0);
+        }
+        //$response = new Response($querySQL, "", $valuesArray, 0);
+        $response->execute();
+    }
+
+}else {
     $res = new Response("Method not found", "", [], 1);
     $res->execute();
 }

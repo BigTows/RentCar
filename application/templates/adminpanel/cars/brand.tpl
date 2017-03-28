@@ -18,22 +18,11 @@
             data: ["name","addRecord"],
 
         },function () {
-            init();
+            initBrands();
         });
     });
-    function init() {
-        new Binding({
-            url: "../application/requests/index.php",
-            action: "getTable",
-            data: [],
-            dataValue: {
-                "getTable": "Brands"
-            }
-        }, function (data) {
-            //replace this line
-            document.getElementById("brandTable").innerHTML="";
-            jsonToTable(data, document.getElementById("brandTable"));
-        })
+    function initBrands() {
+        new Table("Brands",document.getElementById("brandTable"));
     }
-    init();
+    initBrands();
 </script>
