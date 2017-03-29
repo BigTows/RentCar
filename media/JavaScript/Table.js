@@ -81,11 +81,13 @@ class Table {
         for (var key in json[i - 1]) {
             this.Array[this.Array.length] = document.createElement("td");
             this.inputArray[key] = document.createElement("input");
+            this.inputArray[key].setAttribute("class", "form-control");
+
             this.Array[this.Array.length - 1].appendChild(this.inputArray[key]);
             tblTr.appendChild(this.Array[this.Array.length - 1]);
         }
         this.Array[this.Array.length] = document.createElement("td");
-        this.Array[this.Array.length - 1].innerHTML = "<button>Отправить</button>";
+        this.Array[this.Array.length - 1].innerHTML = "<button class='btn btn-success'>Отправить</button>";
         this.Array[this.Array.length - 1].addEventListener("click", (function (array) {
             return function () {
                 self.sendTable(array);

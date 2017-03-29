@@ -1,4 +1,4 @@
-
+<h2>Таблица: <i>Тип транспорта</i></h2>
 <hr>
 <table id="typeTransportTable" class="table table-hover">
 

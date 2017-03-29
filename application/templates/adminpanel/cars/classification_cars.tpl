@@ -1,4 +1,4 @@
-
+<h2>Таблица: <i>Классификация машин</i></h2>
 <hr>
 <table id="ClassificationСarsTable" class="table table-hover">
 
