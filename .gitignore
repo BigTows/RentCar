@@ -1,4 +1,6 @@
 
 application/templates/cache/
+application/templates/ready/
+application/configs/project.config.php
 .idea/
-.DS_Store
+.[DS_Store]
