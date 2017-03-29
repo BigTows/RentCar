@@ -19,9 +19,9 @@ if (isset($_POST['Auth'])) {
     }
     $response->execute();
 } else if (isset($_POST['registration'])) {
-    if (!$user->havePerm("not_registration")){
-        $user->registration($_POST['username'], $_POST['password'], $_POST['email'], $_POST['d'],$_POST['d']);
-    }else{
+    if (!$user->havePerm("not_registration")) {
+        $user->registration($_POST['username'], $_POST['password'], $_POST['email'], $_POST['d'], $_POST['d']);
+    } else {
         $response = new Response("Вы не можете зарегистрироваться!", "", [], 2);
     }
 
@@ -42,60 +42,84 @@ if (isset($_POST['Auth'])) {
         $input = "";
         $values = "";
         $valuesArray = [];
-        foreach ($_POST as $item => $key) {
-            if ($item != "addRecord") {
+        $dataArray = json_decode($_POST['data'], true);
+        foreach ($dataArray as $item => $key) {
                 $input = $input . "`" . $item . "`,";
                 $values = $values . ":" . $item . ",";
-                $valuesArray+=array($item=>$key);
-            }
+            $valuesArray += array($item => $key);
+
         }
         $input = rtrim($input, ",");
         $values = rtrim($values, ",");
 
         $querySQL = "INSERT INTO " . $_POST['addRecord'] . " (" . $input . ") VALUES (" . $values . ")";
-        $statement = $DBConnect->sendQuery($querySQL,$valuesArray);
+        $statement = $DBConnect->sendQuery($querySQL, $valuesArray);
         if ($DBConnect->hasError()) {
             $response = new Response("Произошла ошибка", $statement->errorInfo(), [], 2);
         } else {
-            $response = new Response("Запись добавлена!","",[], 0);
+            $response = new Response("Запись добавлена!", "", [], 0);
         }
 
     } else {
         $response = new Response("У вас нет прав на таблицу: " . $_POST['addRecord'] . "!", "", [], 2);
     }
     $response->execute();
-} else if (isset($_POST['editRecord'])){
-    $querySQL="";
+} else if (isset($_POST['editRecord'])) {
     if ($user->havePerm("edit_" . strtolower($_POST['editRecord']))) {
-        $newDate ="";
-        $oldData ="";
+        $querySQL = "";
+        $newDate = "";
+        $oldData = "";
         $valuesArray = [];
-        $newDataArray = json_decode($_POST['newData'],true);
-        $oldDataArray = json_decode($_POST['oldData'],true);
+        $newDataArray = json_decode($_POST['newData'], true);
+        $oldDataArray = json_decode($_POST['oldData'], true);
 
-        foreach ($newDataArray as $item => $key){
-            $newDate=$newDate."`$item` = :new".$item.",";
-            $oldData=$oldData."`$item` = :".$item." AND";
-            $valuesArray+=array("new".$item=>$key);
+        foreach ($newDataArray as $item => $key) {
+            $newDate = $newDate . "`$item` = :new" . $item . ",";
+            $oldData = $oldData . "`$item` = :" . $item . " AND";
+            $valuesArray += array("new" . $item => $key);
         }
-        foreach ($oldDataArray as $item => $key){
-            $valuesArray+=array($item=>$key);
+        foreach ($oldDataArray as $item => $key) {
+            $valuesArray += array($item => $key);
         }
         $newDate = rtrim($newDate, ",");
         $oldData = rtrim($oldData, "AND");
         //$input = rtrim($input, ",");
-        $querySQL = "UPDATE ".$_POST['editRecord']. " SET " . $newDate . " WHERE " . $oldData . "";
-        $statement = $DBConnect->sendQuery($querySQL,$valuesArray);
+        $querySQL = "UPDATE " . $_POST['editRecord'] . " SET " . $newDate . " WHERE " . $oldData . "";
+        $statement = $DBConnect->sendQuery($querySQL, $valuesArray);
         if ($DBConnect->hasError()) {
             $response = new Response("Произошла ошибка", $statement->errorInfo(), [], 2);
         } else {
-            $response = new Response("Запись изменена!","",[], 0);
+            $response = new Response("Запись изменена!", "", [], 0);
         }
-        //$response = new Response($querySQL, "", $valuesArray, 0);
-        $response->execute();
-    }
 
-}else {
+    } else {
+        $response = new Response("У вас нет прав на таблицу: " . $_POST['editRecord'] . "!", "", [], 2);
+    }
+    $response->execute();
+
+} else if (isset($_POST['deleteRecord'])) {
+    if ($user->havePerm("delete_" . strtolower($_POST['deleteRecord']))) {
+
+        $dataArray = json_decode($_POST['data'], true);
+        $valuesArray = [];
+        $dataQuery = "";
+        foreach ($dataArray as $item => $key) {
+            $dataQuery = $dataQuery . "`$item` = :" . $item . " AND";
+            $valuesArray += array($item => $key);
+        }
+        $dataQuery = rtrim($dataQuery, "AND");
+        $querySQL = "DELETE FROM " . $_POST['deleteRecord'] . " WHERE " . $dataQuery;
+        $statement = $DBConnect->sendQuery($querySQL, $valuesArray);
+        if ($DBConnect->hasError()) {
+            $response = new Response("Произошла ошибка", $statement->errorInfo(), [], 2);
+        } else {
+            $response = new Response("Запись удалена!", "", [], 0);
+        }
+    } else {
+        $response = new Response("У вас нет прав на таблицу: " . $_POST['deleteRecord'] . "!", "", [], 2);
+    }
+    $response->execute();
+} else {
     $res = new Response("Method not found", "", [], 1);
     $res->execute();
 }

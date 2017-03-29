@@ -1,9 +1,9 @@
 <?php
 session_start();
 ?>
-<script src="media/JavaScript/Table.js">
+<script src="media/JavaScript/Binding.js"></script>
+<script src="media/JavaScript/Table.js"></script>
 
-</script>
 
 <body>
 
