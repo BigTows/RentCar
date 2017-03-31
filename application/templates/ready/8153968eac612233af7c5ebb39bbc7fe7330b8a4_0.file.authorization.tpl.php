@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-27 13:12:31
+/* Smarty version 3.1.30, created on 2017-03-30 23:31:20
   from "/var/www/html/cars/application/templates/site/authorization.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58d8e58f9328b9_31397476',
+    'unifunc' => 'content_58dd6b18b1d571_42777169',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8153968eac612233af7c5ebb39bbc7fe7330b8a4' => 
     array (
       0 => '/var/www/html/cars/application/templates/site/authorization.tpl',
-      1 => 1490609285,
+        1 => 1490869862,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:container.tpl' => 1,
   ),
 ),false)) {
-function content_58d8e58f9328b9_31397476 (Smarty_Internal_Template $_smarty_tpl) {
+    function content_58dd6b18b1d571_42777169(Smarty_Internal_Template $_smarty_tpl)
+    {
 ?>
 <!DOCTYPE html>
 <html>
@@ -47,13 +48,14 @@ function content_58d8e58f9328b9_31397476 (Smarty_Internal_Template $_smarty_tpl)
                     <h1>Авторизация</h1>
                     <div class="form-group">
                         <label for="user">Имя пользователя</label>
-                        <input type="text" name="user" class="form-control">
+                        <input type="text" name="user" id="user" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="password">Пароль</label>
-                        <input type="password" name="password" class="form-control">
+                        <input type="password" name="password" id="password" class="form-control">
                     </div>
-                    <button class="btn btn-success">Войти</button>
+                    <div id="infoAuth"></div>
+                    <button class="btn btn-success" id="auth">Войти</button>
                     <hr>
                 </div>
                 <div class="col-sm-2">
@@ -89,11 +91,17 @@ function content_58d8e58f9328b9_31397476 (Smarty_Internal_Template $_smarty_tpl)
     </div>
     <?php echo '<script'; ?>
 >
-        new Binding({
-
-        },function () {
-            alert("Yeap");
-        })
+var btn = document.getElementById("auth");
+btn.addEventListener("click", function () {
+new Binding({
+url: "application/requests/index.php",
+action: "Auth",
+responsePanel: document.getElementById("infoAuth"),
+data: [document.getElementById("user"), document.getElementById("password")]
+},function () {
+location.reload();
+});
+});
     <?php echo '</script'; ?>
 >
 <?php $_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);

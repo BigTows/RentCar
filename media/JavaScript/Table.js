@@ -25,6 +25,7 @@ class Table {
         xhr.send(formData);
         xhr.onreadystatechange = function () {
             if (this.status == 200 && this.readyState == 4) {
+                console.log(this.responseText);
                 var responseJSON = JSON.parse(this.responseText);
                 if (responseJSON.level == 0) {
                     self.jsonToTable(responseJSON.data);
@@ -34,6 +35,7 @@ class Table {
     }
 
     jsonToTable(json) {
+
         this.Array = [];
         var self = this;
         this.tableElement.innerHTML = "";

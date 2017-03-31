@@ -8,11 +8,11 @@
  * @var string switch debug mode. (true == on, false == off);
  */
 const DEBUG_MODE = true;
-$DBName = ""; //Data Base name
-$DBUser = ""; // Name user in Data Base
-$DBPassword = ""; // User password
-$DBHost = ""; // Host Data Base
-$DBDriver = ""; //Driver
+$DBName = "RollingCars"; //Data Base name
+$DBUser = "admin_car"; // Name user in Data Base
+$DBPassword = "Car_Admin"; // User password
+$DBHost = "localhost"; // Host Data Base
+$DBDriver = "mysql"; //Driver
 
 /**
  * Then there is the function

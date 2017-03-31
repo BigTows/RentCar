@@ -14,13 +14,14 @@
                     <h1>Авторизация</h1>
                     <div class="form-group">
                         <label for="user">Имя пользователя</label>
-                        <input type="text" name="user" class="form-control">
+                        <input type="text" name="user" id="user" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="password">Пароль</label>
-                        <input type="password" name="password" class="form-control">
+                        <input type="password" name="password" id="password" class="form-control">
                     </div>
-                    <button class="btn btn-success">Войти</button>
+                    <div id="infoAuth"></div>
+                    <button class="btn btn-success" id="auth">Войти</button>
                     <hr>
                 </div>
                 <div class="col-sm-2">
@@ -55,11 +56,17 @@
         </div>
     </div>
     <script>
-        new Binding({
-
-        },function () {
-            alert("Yeap");
-        })
+        var btn = document.getElementById("auth");
+        btn.addEventListener("click", function () {
+            new Binding({
+                url: "application/requests/index.php",
+                action: "Auth",
+                responsePanel: document.getElementById("infoAuth"),
+                data: [document.getElementById("user"), document.getElementById("password")]
+            }, function () {
+                location.reload();
+            });
+        });
     </script>
 {/capture}
 {include 'container.tpl'}

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-15 13:11:40
-  from "/var/www/html/cars/application/templates/adminpanel/cars/classification_cars.tpl" */
+/* Smarty version 3.1.30, created on 2017-03-29 15:16:22
+  from "/var/www/html/cars/application/templates/adminpanel/cars/colors.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58c9135cb1caa2_83083643',
+    'unifunc' => 'content_58dba596296ba2_50027824',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8561b1ca64e4ee9258ae850b5fc9a983ada47b30' => 
     array (
-      0 => '/var/www/html/cars/application/templates/adminpanel/cars/classification_cars.tpl',
-      1 => 1489572699,
+        0 => '/var/www/html/cars/application/templates/adminpanel/cars/colors.tpl',
+        1 => 1490789772,
       2 => 'file',
     ),
   ),
@@ -20,14 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58c9135cb1caa2_83083643 (Smarty_Internal_Template $_smarty_tpl) {
+    function content_58dba596296ba2_50027824(Smarty_Internal_Template $_smarty_tpl)
+    {
 ?>
-
-<div class="form-group">
-    <label for="name">Добавить классификацию машины</label>
-    <input type="text" class="form-control" id="nameClassificationСars" name="name" placeholder="Классификация" required>
-</div>
-<button class="btn btn-success" id="addClassificationСars" name="addRecord" value="Classification_cars">Добавить</button>
+        <h2>Таблица: <i>Классификация машин</i></h2>
 <hr>
 <table id="ClassificationСarsTable" class="table table-hover">
 
@@ -35,33 +31,7 @@ function content_58c9135cb1caa2_83083643 (Smarty_Internal_Template $_smarty_tpl)
 
 <?php echo '<script'; ?>
 >
-    var btn = document.getElementById("addClassificationСars");
-    btn.addEventListener("click", function () {
-        new Binding({
-            url: "../application/requests/index.php",
-            action: "addRecord",
-            responsePanel: document.getElementById("info"),
-            data: ["nameClassificationСars","addClassificationСars"]
-
-        },function () {
-            initTypeTransport();
-        });
-    });
-    function initTypeTransport() {
-        new Binding({
-            url: "../application/requests/index.php",
-            action: "getTable",
-            data: [],
-            dataValue: {
-                "getTable": "Classification_cars"
-            }
-        }, function (data) {
-            //replace this line
-            document.getElementById("ClassificationСarsTable").innerHTML="";
-            jsonToTable(data, document.getElementById("ClassificationСarsTable"));
-        })
-    }
-    initTypeTransport();
+        new Table("Classification_cars", document.getElementById("ClassificationСarsTable"));
 <?php echo '</script'; ?>
 ><?php }
 }
