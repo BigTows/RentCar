@@ -14,7 +14,7 @@
                     <h1>Авторизация</h1>
                     <div class="form-group">
                         <label for="user">Имя пользователя</label>
-                        <input type="text" name="user" id="user" class="form-control">
+                        <input type="text" name="name" id="user" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="password">Пароль</label>
@@ -30,39 +30,61 @@
                 <div class="col-xs-12 col-sm-5">
                     <h1>Регистрация</h1>
                     <div class="form-group">
-                        <label for="user">Имя пользователя</label>
-                        <input type="text" name="user" class="form-control">
+                        <label for="userRegistration">Имя пользователя (Логин)</label>
+                        <input type="text" name="name" id="userRegistration" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="password">Пароль</label>
-                        <input type="password" name="password" class="form-control">
+                        <label for="passwordRegistration">Пароль</label>
+                        <input type="password" name="password" id="passwordRegistration" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="email">Почта</label>
-                        <input type="email" name="email" class="form-control">
+                        <label for="firstNameRegistration">Ваше имя</label>
+                        <input type="text" name="firstName" id="firstNameRegistration" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="passport">Паспорт</label>
-                        <input type="text" name="passport" class="form-control">
+                        <label for="secondNameRegistration">Ваша фамилия</label>
+                        <input type="text" name="secondName" id="secondNameRegistration" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="telephone">Телефон</label>
-                        <input type="tel" name="telephone" class="form-control">
+                        <label for="emailRegistration">Почта</label>
+                        <input type="email" name="email" id="emailRegistration" class="form-control">
                     </div>
-                    <button class="btn btn-success">Регистрация</button>
+                    <div class="form-group">
+                        <label for="passportRegistration">Паспорт</label>
+                        <input type="text" name="passport" id="passportRegistration" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneRegistration">Телефон</label>
+                        <input type="tel" name="telephone" id="phoneRegistration" class="form-control">
+                    </div>
+                    <div id="infoRegistration"></div>
+                    <button id="registration" class="btn btn-success">Регистрация</button>
                     <hr>
                 </div>
             </div>
         </div>
     </div>
     <script>
-        var btn = document.getElementById("auth");
-        btn.addEventListener("click", function () {
+        var btnAuth = document.getElementById("auth");
+        btnAuth.addEventListener("click", function () {
             new Binding({
                 url: "application/requests/index.php",
-                action: "Auth",
+                action: "auth",
                 responsePanel: document.getElementById("infoAuth"),
-                data: [document.getElementById("user"), document.getElementById("password")]
+                data: ["user", "password"]
+            }, function () {
+                location.reload();
+            });
+        });
+
+        var btnAuth = document.getElementById("registration");
+        btnAuth.addEventListener("click", function () {
+            new Binding({
+                url: "application/requests/index.php",
+                action: "registration",
+                responsePanel: document.getElementById("infoRegistration"),
+                data: ["userRegistration", "passwordRegistration",
+                    "emailRegistration", "passportRegistration", "phoneRegistration", "firstNameRegistration", "secondNameRegistration"]
             }, function () {
                 location.reload();
             });

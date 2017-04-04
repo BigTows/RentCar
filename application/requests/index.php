@@ -9,7 +9,7 @@ require '../configs/database.connect.php';
 require 'response.php';
 $DBConnect->setDebug(false);
 $user = new User($DBConnect, session_id());
-if (isset($_POST['Auth'])) {
+if (isset($_POST['auth'])) {
     $_POST['name'] = $_POST['name'] ?? null;
     $_POST['password'] = $_POST['password'] ?? null;
     if ($user->auth($_POST['name'], $_POST['password'], session_id())) {
@@ -19,12 +19,25 @@ if (isset($_POST['Auth'])) {
     }
     $response->execute();
 } else if (isset($_POST['registration'])) {
+    /**
+     * @TODO fix length field
+     * @TODO create messages (Example: this Email already exist)
+     */
+    $_POST['name'] = $_POST['name'] ?? null;
+    $_POST['password'] = $_POST['password'] ?? null;
+    $_POST['email'] = $_POST['email'] ?? null;
+    $_POST['passport'] = $_POST['passport'] ?? null;
+    $_POST['telephone'] = $_POST['telephone'] ?? null;
+    $_POST['firstName'] = $_POST['firstName'] ?? null;
+    $_POST['secondName'] = $_POST['secondName'] ?? null;
     if (!$user->havePerm("not_registration")) {
-        $user->registration($_POST['username'], $_POST['password'], $_POST['email'], $_POST['d'], $_POST['d']);
+        $statement = $user->registration($_POST['name'], $_POST['password'],
+            $_POST['email'], $_POST['passport'], $_POST['telephone'], $_POST['firstName'], $_POST['secondName']);
+        $response = new Response($statement->errorInfo(), "", [], 2);
     } else {
         $response = new Response("Вы не можете зарегистрироваться!", "", [], 2);
     }
-
+    $response->execute();
 } else if (isset($_POST['getTable'])) {
     if ($user->havePerm("view_" . strtolower($_POST['getTable']))) {
         $statement = $DBConnect->sendQuery("SELECT * FROM " . $_POST['getTable']);
