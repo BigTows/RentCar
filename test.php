@@ -10,7 +10,7 @@ while ($row=$Result->fetch()){
 }*/
 require $rootPath.'application/configs/database.connect.php';
 require $rootPath.'application/classes/user.php';
-$var = new User($DBConnect,"BigTows","test");
+$var = new User($DBConnect, "BigTows", "1");
 echo $var->isLoggin();
 
 echo $var->havePerm("adminpanel");

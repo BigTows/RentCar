@@ -10,7 +10,7 @@
 const DEBUG_MODE = true;
 $DBName = "RollingCars"; //Data Base name
 $DBUser = "admin_car"; // Name user in Data Base
-$DBPassword = "Car_Admin2"; // User password
+$DBPassword = "Car_Admin"; // User password
 $DBHost = "localhost"; // Host Data Base
 $DBDriver = "mysql"; //Driver
 
