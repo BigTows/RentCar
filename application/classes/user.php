@@ -90,21 +90,28 @@ class User
      * @param $passport
      * @param $phone
      */
-    public function registration($name, $password, $email, $passport, $phone, $firstName, $secondName)
+    public function registration($login, $password, $email, $passport, $phone, $firstName, $secondName)
     {
-        $statement = $this->DBConnect->sendQuery("
-        INSERT INTO `Users`(`login`, `password`, `first_name`, `second_name`, `phone`, `passport`,`email`) 
-        VALUES (:name,:password,:first_name,:second_name,:phone,:passport,:email)
-        ",[
-            "name"=>$name,
-            "password" => sha1($password),
-            "first_name" => $firstName,
-            "second_name" => $secondName,
+        $validData = new RegistrationData($this->DBConnect, [
+            "login" => $login,
             "phone" => $phone,
             "passport" => $passport,
-            "email" => $email
-        ]);
-        return $statement;
+            "email" => $email]);
+        if ($validData->getValid()) {
+            $this->DBConnect->sendQuery("
+        INSERT INTO `Users`(`login`, `password`, `first_name`, `second_name`, `phone`, `passport`,`email`) 
+        VALUES (:login,:password,:first_name,:second_name,:phone,:passport,:email)
+        ", [
+                "login" => $login,
+                "password" => sha1($password),
+                "first_name" => $firstName,
+                "second_name" => $secondName,
+                "phone" => $phone,
+                "passport" => $passport,
+                "email" => $email
+            ]);
+        }
+        return $validData;
     }
 
     public function isLoggin()

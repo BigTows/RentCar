@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-30 23:31:20
+/* Smarty version 3.1.30, created on 2017-04-04 22:35:54
   from "/var/www/html/cars/application/templates/site/authorization.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-    'unifunc' => 'content_58dd6b18b1d571_42777169',
+    'unifunc' => 'content_58e3f59acf2233_89558754',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8153968eac612233af7c5ebb39bbc7fe7330b8a4' => 
     array (
       0 => '/var/www/html/cars/application/templates/site/authorization.tpl',
-        1 => 1490869862,
+        1 => 1491334553,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:container.tpl' => 1,
   ),
 ),false)) {
-    function content_58dd6b18b1d571_42777169(Smarty_Internal_Template $_smarty_tpl)
+    function content_58e3f59acf2233_89558754(Smarty_Internal_Template $_smarty_tpl)
     {
 ?>
 <!DOCTYPE html>
@@ -48,7 +48,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
                     <h1>Авторизация</h1>
                     <div class="form-group">
                         <label for="user">Имя пользователя</label>
-                        <input type="text" name="user" id="user" class="form-control">
+                        <input type="text" name="name" id="user" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="password">Пароль</label>
@@ -64,26 +64,35 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
                 <div class="col-xs-12 col-sm-5">
                     <h1>Регистрация</h1>
                     <div class="form-group">
-                        <label for="user">Имя пользователя</label>
-                        <input type="text" name="user" class="form-control">
+                        <label for="userRegistration">Имя пользователя (Логин)</label>
+                        <input type="text" name="name" id="userRegistration" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="password">Пароль</label>
-                        <input type="password" name="password" class="form-control">
+                        <label for="passwordRegistration">Пароль</label>
+                        <input type="password" name="password" id="passwordRegistration" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="email">Почта</label>
-                        <input type="email" name="email" class="form-control">
+                        <label for="firstNameRegistration">Ваше имя</label>
+                        <input type="text" name="firstName" id="firstNameRegistration" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="passport">Паспорт</label>
-                        <input type="text" name="passport" class="form-control">
+                        <label for="secondNameRegistration">Ваша фамилия</label>
+                        <input type="text" name="secondName" id="secondNameRegistration" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="telephone">Телефон</label>
-                        <input type="tel" name="telephone" class="form-control">
+                        <label for="emailRegistration">Почта</label>
+                        <input type="email" name="email" id="emailRegistration" class="form-control">
                     </div>
-                    <button class="btn btn-success">Регистрация</button>
+                    <div class="form-group">
+                        <label for="passportRegistration">Паспорт</label>
+                        <input type="text" name="passport" id="passportRegistration" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneRegistration">Телефон</label>
+                        <input type="tel" name="telephone" id="phoneRegistration" class="form-control">
+                    </div>
+                    <div id="infoRegistration"></div>
+                    <button id="registration" class="btn btn-success">Регистрация</button>
                     <hr>
                 </div>
             </div>
@@ -91,14 +100,27 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     </div>
     <?php echo '<script'; ?>
 >
-var btn = document.getElementById("auth");
-btn.addEventListener("click", function () {
+var btnAuth = document.getElementById("auth");
+btnAuth.addEventListener("click", function () {
 new Binding({
 url: "application/requests/index.php",
-action: "Auth",
+action: "auth",
 responsePanel: document.getElementById("infoAuth"),
-data: [document.getElementById("user"), document.getElementById("password")]
-},function () {
+data: ["user", "password"]
+}, function () {
+location.reload();
+});
+});
+
+var btnAuth = document.getElementById("registration");
+btnAuth.addEventListener("click", function () {
+new Binding({
+url: "application/requests/index.php",
+action: "registration",
+responsePanel: document.getElementById("infoRegistration"),
+data: ["userRegistration", "passwordRegistration",
+"emailRegistration", "passportRegistration", "phoneRegistration", "firstNameRegistration", "secondNameRegistration"]
+}, function () {
 location.reload();
 });
 });

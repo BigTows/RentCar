@@ -10,7 +10,15 @@ while ($row=$Result->fetch()){
 }*/
 require $rootPath.'application/configs/database.connect.php';
 require $rootPath.'application/classes/user.php';
-$var = new User($DBConnect, "BigTows", "1");
-echo $var->isLoggin();
+require_once $rootPath . 'application/classes/data.checker.php';
+//var = new User($DBConnect, "BigTows", "1");
+//echo $var->isLoggin();
 
-echo $var->havePerm("adminpanel");
+//echo $var->havePerm("adminpanel");
+
+
+$test = new RegistrationData($DBConnect, [
+    "email" => "dsd",
+    "phone" => "12312321",
+    "name" => "Asdds"]);
+echo $test->getMessage();

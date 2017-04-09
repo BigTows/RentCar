@@ -31,31 +31,31 @@
                     <h1>Регистрация</h1>
                     <div class="form-group">
                         <label for="userRegistration">Имя пользователя (Логин)</label>
-                        <input type="text" name="name" id="userRegistration" class="form-control">
+                        <input type="text" name="name" id="userRegistration" required class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="passwordRegistration">Пароль</label>
-                        <input type="password" name="password" id="passwordRegistration" class="form-control">
+                        <input type="password" name="password" id="passwordRegistration" required class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="firstNameRegistration">Ваше имя</label>
-                        <input type="text" name="firstName" id="firstNameRegistration" class="form-control">
+                        <input type="text" name="firstName" id="firstNameRegistration" required class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="secondNameRegistration">Ваша фамилия</label>
-                        <input type="text" name="secondName" id="secondNameRegistration" class="form-control">
+                        <input type="text" name="secondName" id="secondNameRegistration" required class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="emailRegistration">Почта</label>
-                        <input type="email" name="email" id="emailRegistration" class="form-control">
+                        <input type="email" name="email" id="emailRegistration" required class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="passportRegistration">Паспорт</label>
-                        <input type="text" name="passport" id="passportRegistration" class="form-control">
+                        <input type="text" name="passport" id="passportRegistration" required class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="phoneRegistration">Телефон</label>
-                        <input type="tel" name="telephone" id="phoneRegistration" class="form-control">
+                        <input type="tel" name="telephone" id="phoneRegistration" required class="form-control">
                     </div>
                     <div id="infoRegistration"></div>
                     <button id="registration" class="btn btn-success">Регистрация</button>
@@ -77,8 +77,8 @@
             });
         });
 
-        var btnAuth = document.getElementById("registration");
-        btnAuth.addEventListener("click", function () {
+        var btnReg = document.getElementById("registration");
+        btnReg.addEventListener("click", function () {
             new Binding({
                 url: "application/requests/index.php",
                 action: "registration",
@@ -86,7 +86,7 @@
                 data: ["userRegistration", "passwordRegistration",
                     "emailRegistration", "passportRegistration", "phoneRegistration", "firstNameRegistration", "secondNameRegistration"]
             }, function () {
-                location.reload();
+                // location.reload();
             });
         });
     </script>

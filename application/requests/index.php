@@ -5,6 +5,7 @@ session_start();
  * This php Listener POST Request
  */
 require '../classes/user.php';
+require '../classes/data.checker.php';
 require '../configs/database.connect.php';
 require 'response.php';
 $DBConnect->setDebug(false);
@@ -19,10 +20,6 @@ if (isset($_POST['auth'])) {
     }
     $response->execute();
 } else if (isset($_POST['registration'])) {
-    /**
-     * @TODO fix length field
-     * @TODO create messages (Example: this Email already exist)
-     */
     $_POST['name'] = $_POST['name'] ?? null;
     $_POST['password'] = $_POST['password'] ?? null;
     $_POST['email'] = $_POST['email'] ?? null;
@@ -31,9 +28,13 @@ if (isset($_POST['auth'])) {
     $_POST['firstName'] = $_POST['firstName'] ?? null;
     $_POST['secondName'] = $_POST['secondName'] ?? null;
     if (!$user->havePerm("not_registration")) {
-        $statement = $user->registration($_POST['name'], $_POST['password'],
+        $validData = $user->registration($_POST['name'], $_POST['password'],
             $_POST['email'], $_POST['passport'], $_POST['telephone'], $_POST['firstName'], $_POST['secondName']);
-        $response = new Response($statement->errorInfo(), "", [], 2);
+        if ($validData->getValid()) {
+            $response = new Response("Успешно", "", [], 0);
+        } else {
+            $response = new Response("Неверные данные", $validData->getMessage(), [], 2);
+        }
     } else {
         $response = new Response("Вы не можете зарегистрироваться!", "", [], 2);
     }
@@ -57,8 +58,8 @@ if (isset($_POST['auth'])) {
         $valuesArray = [];
         $dataArray = json_decode($_POST['data'], true);
         foreach ($dataArray as $item => $key) {
-                $input = $input . "`" . $item . "`,";
-                $values = $values . ":" . $item . ",";
+            $input = $input . "`" . $item . "`,";
+            $values = $values . ":" . $item . ",";
             $valuesArray += array($item => $key);
 
         }
