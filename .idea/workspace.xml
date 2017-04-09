@@ -1,55 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99525af5-63fa-42e9-812e-78ac73583970" name="Default" comment="update reg valid data Module">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/requests/buy.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/JavaScript/Order.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/style/main.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/cars.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/configs/project.config.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/019aae28277048f9c0825f7eaf64c9247c2e82a8_0.file.type_transport.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/029746cdeaf2c413fc9fa7bdd3fbe2c7c3147c2f_0.file.nav.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/07a90eb28c7a6676adb6b3ffa6b05f2c309c847d_0.file.stats.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/0b7ea6dd03b32cb4c6ecd88c80fb77a5a0c34606_0.file.main.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/164011807d8cacb29f4cf8f81b492014755fc8c1_0.file.index.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/1c6367715d9b210e9467f1e565b224f622808477_0.file.404.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/1d7895ecba102788921c18d1b67666abfe503283_0.file.container.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/352724bfa12a580c57b11c4c69ef5a30ae9a7234_0.file.head.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/3d161a6cd39815676bb10c8846086040e7730185_0.file.main.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/43b170b1686209107a5205a9bc65195f754321ff_0.file.profile.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/55c07def09247f21279fa69ccc48af38341b5814_0.file.test.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/5b0d69f29c302b1f222f76035b533c112d8275db_0.file.head.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/5e06f7d515f105ab6c0cb2fdc91ecb4ad6b733cd_0.file.test.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/60a42afe15bf8f454927ec02a2f0d19e2a134261_0.file.authform.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/6d42820b336f74e74d6d9c32c16c0e342f5f4717_0.file.container.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/8153968eac612233af7c5ebb39bbc7fe7330b8a4_0.file.authorization.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/8561b1ca64e4ee9258ae850b5fc9a983ada47b30_0.file.classification_cars.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/86e78e686f63f82996e4a3165c5701436fe6ce76_0.file.404.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/8b2d81ede0a8bb16120a6ee8c159c8351472d50a_0.file.head.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/8ef2c75f6160e83661e2da09cf4da23158888ceb_0.file.cars.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/a8a86bc8913bdc148191b67cf2a1f8a58d01fcd0_0.file.nav.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/a9816b6ab586fb04b56e46508b5ee98195b23359_0.file.brand.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/b522d7b34acf489eef4ccacbf581130879f7abe9_0.file.main.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/bc45f652993ecf2c319679684d00ba35734e6d72_0.file.login.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/bcf6bca5a450d6d177c843f1c2d866ae746d4100_0.file.buy.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/cd377629fda756fa62678cdc942734755275cb1b_0.file.container.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/dab7c83e9d5d3a1bfa34e28379ce290e2abe96ca_0.file.nav.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/ready/e9b9e3b98536fcc9c81b24ba741fb8f86385e2bb_0.file.order.tpl.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/Smarty.class.php" afterPath="$PROJECT_DIR$/application/libs/Smarty.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_configfileparser.php" afterPath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_configfileparser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templatecompilerbase.php" afterPath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templatecompilerbase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templatelexer.php" afterPath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templatelexer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templateparser.php" afterPath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templateparser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/requests/index.php" afterPath="$PROJECT_DIR$/application/requests/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/site/buy.tpl" afterPath="$PROJECT_DIR$/application/templates/site/buy.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/site/head.tpl" afterPath="$PROJECT_DIR$/application/templates/site/head.tpl" />
+    <list default="true" id="99525af5-63fa-42e9-812e-78ac73583970" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -110,12 +64,12 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+          <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/README.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="165">
-                    <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+                  <first_editor relative-caret-position="195">
+                    <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
                     <folding />
                   </first_editor>
                   <second_editor />
@@ -143,11 +97,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="buy.tpl" pinned="false" current-in-tab="true">
+          <file leaf-file-name="buy.tpl" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/application/templates/site/buy.tpl">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="255">
-                  <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+                  <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
@@ -159,7 +113,7 @@
             <entry file="file://$PROJECT_DIR$/media/style/main.css">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="225">
-                  <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+                  <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
                   <folding />
                 </state>
               </provider>
@@ -209,7 +163,7 @@
             <entry file="file://$PROJECT_DIR$/media/JavaScript/Order.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="955">
-                  <caret line="105" column="4" lean-forward="false" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="4" />
+                  <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -221,7 +175,7 @@
                 <state relative-caret-position="150">
                   <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="29" />
                   <folding>
-                    <marker date="1491721120000" expanded="true" signature="335:357" ph="SELECT * FRO... freeCars" />
+                    <marker date="1491735537000" expanded="true" signature="337:359" ph="SELECT * FRO... freeCars" />
                   </folding>
                 </state>
               </provider>
@@ -324,7 +278,6 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/application/templates/adminpanel/login.tpl" />
         <option value="$PROJECT_DIR$/media/JavaScript/Binding.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/application/configs/project.config.php" />
         <option value="$PROJECT_DIR$/application/util/data.checker.php" />
         <option value="$PROJECT_DIR$/test.php" />
@@ -341,6 +294,7 @@
         <option value="$PROJECT_DIR$/media/style/main.css" />
         <option value="$PROJECT_DIR$/application/templates/site/buy.tpl" />
         <option value="$PROJECT_DIR$/media/JavaScript/Order.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -745,7 +699,7 @@
       <workItem from="1491329766282" duration="7046000" />
       <workItem from="1491387801335" duration="1452000" />
       <workItem from="1491712200135" duration="1290000" />
-      <workItem from="1491714750459" duration="16034000" />
+      <workItem from="1491714750459" duration="16142000" />
     </task>
     <task id="LOCAL-00001" summary="version 0.4">
       <created>1490710651966</created>
@@ -831,11 +785,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491717745716</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add Buy function">
+      <created>1491735544298</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1491735544298</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94538000" />
+    <option name="totallyTimeSpent" value="94646000" />
   </component>
   <component name="TodoView" selected-index="5">
     <todo-panel id="selected-file">
@@ -886,7 +847,8 @@
     <MESSAGE value="update README" />
     <MESSAGE value="Refract code" />
     <MESSAGE value="update reg valid data Module" />
-    <option name="LAST_COMMIT_MESSAGE" value="update reg valid data Module" />
+    <MESSAGE value="add Buy function" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Buy function" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1154,7 +1116,7 @@
         <state relative-caret-position="150">
           <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="29" />
           <folding>
-            <marker date="1491721120000" expanded="true" signature="335:357" ph="SELECT * FRO... freeCars" />
+            <marker date="1491735537000" expanded="true" signature="337:359" ph="SELECT * FRO... freeCars" />
           </folding>
         </state>
       </provider>
@@ -1169,8 +1131,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/requests/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="9" selection-end-column="23" />
+        <state relative-caret-position="811">
+          <caret line="136" column="55" lean-forward="true" selection-start-line="136" selection-start-column="3" selection-end-line="136" selection-end-column="55" />
           <folding>
             <marker date="1491717830000" expanded="true" signature="1856:1870" ph="SELECT * FRO... ${$_POST['getTable']}" />
             <marker date="1491717830000" expanded="true" signature="2865:2946" ph="INSERT INTO ${$_POST['addRecord']}... " />
@@ -1194,17 +1156,6 @@
         <state relative-caret-position="135">
           <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="165">
-            <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-            <folding />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -1251,7 +1202,15 @@
     <entry file="file://$PROJECT_DIR$/media/style/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/JavaScript/Order.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="955">
+          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1259,18 +1218,21 @@
     <entry file="file://$PROJECT_DIR$/application/templates/site/buy.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+          <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/media/JavaScript/Order.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="955">
-          <caret line="105" column="4" lean-forward="false" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="4" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="195">
+            <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
