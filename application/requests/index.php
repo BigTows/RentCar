@@ -31,7 +31,7 @@ if (isset($_POST['auth'])) {
         $validData = $user->registration($_POST['name'], $_POST['password'],
             $_POST['email'], $_POST['passport'], $_POST['telephone'], $_POST['firstName'], $_POST['secondName']);
         if ($validData->getValid()) {
-            $response = new Response("Успешно", "", [], 0);
+            $response = new Response("Успешно", "Теперь авторизуйтесь", [], 0);
         } else {
             $response = new Response("Неверные данные", $validData->getMessage(), [], 2);
         }
