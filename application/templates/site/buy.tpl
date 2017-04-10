@@ -15,8 +15,6 @@
             <div class="row">
                 <div class="form-group">
                     <div class="col-md-6 col-xs-12" id="orderPanel">
-                        <select id="brands"></select>
-                        <select id="models"></select>
                         <div id="div-colors">
 
                         </div>

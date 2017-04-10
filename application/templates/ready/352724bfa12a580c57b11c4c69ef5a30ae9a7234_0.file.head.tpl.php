@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-27 13:14:25
+/* Smarty version 3.1.30, created on 2017-04-09 13:23:32
   from "/var/www/html/cars/application/templates/site/head.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58d8e6014070a0_86254610',
+    'unifunc' => 'content_58ea0ba4d852a6_92409615',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '352724bfa12a580c57b11c4c69ef5a30ae9a7234' => 
     array (
       0 => '/var/www/html/cars/application/templates/site/head.tpl',
-      1 => 1490609664,
+        1 => 1491733411,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58d8e6014070a0_86254610 (Smarty_Internal_Template $_smarty_tpl) {
+    function content_58ea0ba4d852a6_92409615(Smarty_Internal_Template $_smarty_tpl)
+    {
 ?>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./media/style/main.css">
     <?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.1.1.min.js"><?php echo '</script'; ?>
 >

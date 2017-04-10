@@ -3,7 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="99525af5-63fa-42e9-812e-78ac73583970" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/Smarty.class.php" afterPath="$PROJECT_DIR$/application/libs/Smarty.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_configfileparser.php" afterPath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_configfileparser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templatecompilerbase.php" afterPath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templatecompilerbase.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templatelexer.php" afterPath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templatelexer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templateparser.php" afterPath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templateparser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/ready/352724bfa12a580c57b11c4c69ef5a30ae9a7234_0.file.head.tpl.php" afterPath="$PROJECT_DIR$/application/templates/ready/352724bfa12a580c57b11c4c69ef5a30ae9a7234_0.file.head.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/ready/bcf6bca5a450d6d177c843f1c2d866ae746d4100_0.file.buy.tpl.php" afterPath="$PROJECT_DIR$/application/templates/ready/bcf6bca5a450d6d177c843f1c2d866ae746d4100_0.file.buy.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/site/buy.tpl" afterPath="$PROJECT_DIR$/application/templates/site/buy.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/JavaScript/Order.js" afterPath="$PROJECT_DIR$/media/JavaScript/Order.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,14 +25,14 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.3743158">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/application/requests/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="811">
-                  <caret line="136" column="55" lean-forward="true" selection-start-line="136" selection-start-column="3" selection-end-line="136" selection-end-column="55" />
+                <state relative-caret-position="2040">
+                  <caret line="136" column="55" lean-forward="false" selection-start-line="136" selection-start-column="3" selection-end-line="136" selection-end-column="55" />
                   <folding>
                     <marker date="1491717830000" expanded="true" signature="1856:1870" ph="SELECT * FRO... ${$_POST['getTable']}" />
                     <marker date="1491717830000" expanded="true" signature="2865:2946" ph="INSERT INTO ${$_POST['addRecord']}... " />
@@ -47,7 +55,7 @@
           <file leaf-file-name="authorization.tpl" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/application/templates/site/authorization.tpl">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="488">
+                <state relative-caret-position="615">
                   <caret line="41" column="115" lean-forward="false" selection-start-line="41" selection-start-column="103" selection-end-line="41" selection-end-column="115" />
                   <folding />
                 </state>
@@ -64,7 +72,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+          <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/README.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="SPLIT">
@@ -97,14 +105,12 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="buy.tpl" pinned="false" current-in-tab="false">
+          <file leaf-file-name="buy.tpl" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/application/templates/site/buy.tpl">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-                  <folding>
-                    <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
+                <state relative-caret-position="240">
+                  <caret line="16" column="68" lean-forward="false" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -112,7 +118,7 @@
           <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/media/style/main.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
+                <state relative-caret-position="240">
                   <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
                   <folding />
                 </state>
@@ -162,8 +168,8 @@
           <file leaf-file-name="Order.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/media/JavaScript/Order.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="955">
-                  <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+                <state relative-caret-position="701">
+                  <caret line="81" column="44" lean-forward="true" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
                   <folding />
                 </state>
               </provider>
@@ -292,9 +298,9 @@
         <option value="$PROJECT_DIR$/application/templates/adminpanel/head.tpl" />
         <option value="$PROJECT_DIR$/application/templates/site/head.tpl" />
         <option value="$PROJECT_DIR$/media/style/main.css" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/application/templates/site/buy.tpl" />
         <option value="$PROJECT_DIR$/media/JavaScript/Order.js" />
-        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -306,8 +312,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="width" value="2880" />
-    <option name="height" value="1620" />
+    <option name="x" value="4" />
+    <option name="y" value="23" />
+    <option name="width" value="3196" />
+    <option name="height" value="1777" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -327,6 +335,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -557,8 +567,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -568,7 +576,6 @@
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/application/templates/site/authorization.tpl&#10;/Volumes/Discount/cars/application/configs/project.config.php&#10;/Volumes/Discount/cars/application/templates/adminpanel/authform.tpl" />
-    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -699,7 +706,8 @@
       <workItem from="1491329766282" duration="7046000" />
       <workItem from="1491387801335" duration="1452000" />
       <workItem from="1491712200135" duration="1290000" />
-      <workItem from="1491714750459" duration="16142000" />
+      <workItem from="1491714750459" duration="16332000" />
+      <workItem from="1491846849799" duration="1705000" />
     </task>
     <task id="LOCAL-00001" summary="version 0.4">
       <created>1490710651966</created>
@@ -792,11 +800,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491735544298</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="update README">
+      <created>1491735627702</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1491735627702</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94646000" />
+    <option name="totallyTimeSpent" value="96541000" />
   </component>
   <component name="TodoView" selected-index="5">
     <todo-panel id="selected-file">
@@ -808,12 +823,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="2880" height="1620" extended-state="0" />
+    <frame x="4" y="23" width="3196" height="1777" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2857639" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2568836" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299428" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31977114" sideWeight="0.5013889" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28688523" sideWeight="0.5013889" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -844,11 +859,12 @@
     <MESSAGE value="update readme and some tamplates" />
     <MESSAGE value="update" />
     <MESSAGE value="add &quot;permissions pages&quot;, auth for users" />
-    <MESSAGE value="update README" />
     <MESSAGE value="Refract code" />
     <MESSAGE value="update reg valid data Module" />
     <MESSAGE value="add Buy function" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Buy function" />
+    <MESSAGE value="update README" />
+    <MESSAGE value="fix Oder page" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix Oder page" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1111,28 +1127,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/requests/buy.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="29" />
-          <folding>
-            <marker date="1491735537000" expanded="true" signature="337:359" ph="SELECT * FRO... freeCars" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/templates/adminpanel/head.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="58" lean-forward="false" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/requests/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="811">
-          <caret line="136" column="55" lean-forward="true" selection-start-line="136" selection-start-column="3" selection-end-line="136" selection-end-column="55" />
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="9" selection-end-column="23" />
           <folding>
             <marker date="1491717830000" expanded="true" signature="1856:1870" ph="SELECT * FRO... ${$_POST['getTable']}" />
             <marker date="1491717830000" expanded="true" signature="2865:2946" ph="INSERT INTO ${$_POST['addRecord']}... " />
@@ -1185,7 +1190,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/templates/site/authorization.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
+        <state relative-caret-position="615">
           <caret line="41" column="115" lean-forward="false" selection-start-line="41" selection-start-column="103" selection-end-line="41" selection-end-column="115" />
           <folding />
         </state>
@@ -1201,27 +1206,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/media/style/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="240">
           <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/media/JavaScript/Order.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="955">
-          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/templates/site/buy.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1233,6 +1220,32 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/requests/buy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="29" />
+          <folding>
+            <marker date="1491735537000" expanded="true" signature="337:359" ph="SELECT * FRO... freeCars" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/site/buy.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="68" lean-forward="false" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/JavaScript/Order.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="701">
+          <caret line="81" column="44" lean-forward="true" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>

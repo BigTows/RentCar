@@ -1,6 +1,11 @@
 class Order {
     constructor(elem) {
         this.home = elem;
+        this.brandSelect = document.createElement("select");
+        this.brandSelect.className = "form-control";
+        this.modelSelect = document.createElement("select");
+        this.modelSelect.className = "form-control";
+        this.colorSelect = document.createElement("div-colors");
         this.xhr = new XMLHttpRequest();
         this.xhr.open("POST", "/cars/application/requests/buy.php");
         const data = new FormData();
@@ -18,62 +23,58 @@ class Order {
     printBrand() {
         console.log(this.json);
         let self = this;
-        let select = document.getElementById("brands");
-        select.innerHTML = "";
+        this.brandSelect.innerHTML = "";
         let brands = new FormData();
-        select.onchange = function () {
-            self.brand = select.value;
+        this.brandSelect.onchange = function () {
+            self.brand = self.brandSelect.value;
             self.printModels();
+            self.colorSelect.remove();
         };
         let option = document.createElement("option");
         option.textContent = "Выберите Бренд";
         option.selected = true;
         option.disabled = true;
-        select.appendChild(option);
+        this.brandSelect.appendChild(option);
 
         this.json.data.forEach(function (element) {
             if (brands.get(element["name_brand"]) === null) {
                 option = document.createElement("option");
                 option.value = element["id_brand"];
                 option.textContent = element["name_brand"];
-                select.appendChild(option);
+                self.brandSelect.appendChild(option);
                 brands.append(element["name_brand"], 0);
             }
         });
-        this.home.appendChild(select);
-        select.className = "form-control";
+        this.home.appendChild(this.brandSelect);
     }
 
     printModels() {
-        let select = document.getElementById("models");
-        select.innerHTML = "";
+        this.modelSelect.innerHTML = "";
         let self = this;
         let models = new FormData();
-        select.onchange = function () {
-            self.car = select.value;
+        this.modelSelect.onchange = function () {
+            self.car = self.modelSelect.value;
             self.printColors();
         };
         let option = document.createElement("option");
         option.textContent = "Выберите Марку";
         option.selected = true;
         option.disabled = true;
-        select.appendChild(option);
+        this.modelSelect.appendChild(option);
         this.json.data.forEach(function (element) {
             let option = document.createElement("option");
             if (element["id_brand"] === self.brand && models.get(element["model"]) === null) {
                 option.value = element["model"];
                 option.textContent = element["model"];
-                select.appendChild(option);
+                self.modelSelect.appendChild(option);
                 models.append(element["model"], 0);
             }
         });
-        this.home.appendChild(select);
-        select.className = "form-control";
+        this.home.appendChild(this.modelSelect);
     }
 
     printColors() {
-        let div = document.getElementById("div-colors");
-        div.innerHTML = "";
+        this.colorSelect.innerHTML = "";
         let self = this;
         this.json.data.forEach(function (element) {
 
@@ -87,7 +88,6 @@ class Order {
                         function (res) {
                             map.geoObjects.removeAll();
                             map.geoObjects.add(res.geoObjects.get(0));
-                            // var point = new YMaps.GeoPoint(element["latitude"],element["longitude"]); // Координаты центра Москвы
                             map.setCenter([element["latitude"], element["longitude"]], 15, {
                                 checkZoomRange: true
                             });
@@ -97,10 +97,10 @@ class Order {
                         }
                     );
                 };
-                div.appendChild(divColor);
+                self.colorSelect.appendChild(divColor);
             }
         });
-        this.home.appendChild(div);
+        this.home.appendChild(this.colorSelect);
     }
 
 
