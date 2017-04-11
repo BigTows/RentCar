@@ -19,6 +19,8 @@ class Order {
         this.datePicker.setAttribute("data-range", true);
         this.datePicker.id = "datePicker";
         this.datePicker.setAttribute("data-multiple-dates-separator", " : ");
+        this.price = document.createElement("p");
+
         this.xhr = new XMLHttpRequest();
         this.xhr.open("POST", "/cars/application/requests/buy.php");
         const data = new FormData();
@@ -41,6 +43,8 @@ class Order {
             self.brand = self.brandSelect.value;
             self.printModels();
             self.colorSelect.remove();
+            self.price.remove();
+            self.datePicker.remove();
         };
         let option = document.createElement("option");
         option.textContent = "Выберите Бренд";
@@ -66,6 +70,8 @@ class Order {
         let models = new FormData();
         this.modelSelect.onchange = function () {
             self.car = self.modelSelect.value;
+            self.datePicker.remove();
+            self.price.remove();
             self.printColors();
         };
         let option = document.createElement("option");
@@ -77,7 +83,7 @@ class Order {
             let option = document.createElement("option");
             if (element["id_brand"] === self.brand && models.get(element["model"]) === null) {
                 option.value = element["model"];
-                option.textContent = element["model"];
+                option.textContent = element["model"] + " (За сутки " + element['cost_per_day'] + ")";
                 self.modelSelect.appendChild(option);
                 models.append(element["model"], 0);
             }
@@ -95,6 +101,8 @@ class Order {
                 divColor.style.backgroundColor = "#" + element["hex_color"];
                 divColor.className = "color-pick";
                 divColor.onclick = function () {
+                    self.datePicker.remove();
+                    self.price.remove();
                     const myGeocoder = ymaps.geocode(element["address"]);
                     myGeocoder.then(
                         function (res) {
@@ -111,15 +119,19 @@ class Order {
                                 },
                                 onSelect: function (formattedDatestring, date, inst) {
                                     if (date.length == 2) {
-                                        console.log(date);
+                                        //console.log(date);
                                         var timeDiff = Math.abs(date[1].getTime() - date[0].getTime());
-                                        console.log(element["cost_per_day"] * (Math.ceil(timeDiff / (1000 * 3600 * 24)) + 1));
-
-
+                                        var day = (Math.ceil(timeDiff / (1000 * 3600 * 24)) + 1);
+                                        self.price.innerHTML = "Цена за " + day + " дней, составляет " + element["cost_per_day"] * day + "<a class='btn btn-primary'> Купить </a>";
+                                        self.home.append(self.price);
+                                    } else {
+                                        self.price.remove()
                                     }
+
                                 }
-                                
+
                             });
+                            console.log($('#datePicker').datepicker.data('datepicker'));
                         },
                         function (err) {
                             console.log(err);
@@ -132,8 +144,6 @@ class Order {
         this.home.appendChild(this.colorSelect);
     }
 
-    printDate() {
-    }
-
-
 }
+
+

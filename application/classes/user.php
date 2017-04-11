@@ -114,6 +114,11 @@ class User
         return $validData;
     }
 
+    public function getId()
+    {
+        return $this->id;
+    }
+
     public function isLoggin()
     {
         return $this->isLoggin;

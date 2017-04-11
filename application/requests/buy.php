@@ -20,6 +20,31 @@ if (isset($_POST['getFreeCars'])) {
     } else {
         $response = new Response("У вас нет прав для просмотра свободных машин!", "", [], 2);
     }
+} else if (isset($_POST['order'])) {
+    if ($user->havePerm("create_order")) {
+        $input = "";
+        $values = "";
+        $valuesArray = [];
+        $dataArray = json_decode($_POST['data'], true);
+        foreach ($dataArray as $item => $key) {
+            $input = $input . "`" . $item . "`,";
+            $values = $values . ":" . $item . ",";
+            $valuesArray += array($item => $key);
+
+        }
+        $input = rtrim($input, ",");
+        $values = rtrim($values, ",");
+
+        $querySQL = "INSERT INTO Orders (" . $input . ") VALUES (" . $values . ")";
+        $statement = $DBConnect->sendQuery($querySQL, $valuesArray);
+        if ($DBConnect->hasError()) {
+            $response = new Response("Произошла ошибка", "", [], 2);
+        } else {
+            $response = new Response("Заказ обработан!", "", [], 0);
+        }
+    } else {
+        $response = new Response("У вас нет прав для создания заказа!", "", [], 2);
+    }
 } else {
     $response = new Response("Method not found", "", [], 1);
 }
