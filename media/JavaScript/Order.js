@@ -5,7 +5,20 @@ class Order {
         this.brandSelect.className = "form-control";
         this.modelSelect = document.createElement("select");
         this.modelSelect.className = "form-control";
+        /**
+         * Setting Color panel selector
+         * @type {Element}
+         */
         this.colorSelect = document.createElement("div-colors");
+        /**
+         * Setting date Picker
+         * @type {Element}
+         */
+        this.datePicker = document.createElement("input");
+        this.datePicker.className = "datepicker-here form-control";
+        this.datePicker.setAttribute("data-range", true);
+        this.datePicker.id = "datePicker";
+        this.datePicker.setAttribute("data-multiple-dates-separator", " : ");
         this.xhr = new XMLHttpRequest();
         this.xhr.open("POST", "/cars/application/requests/buy.php");
         const data = new FormData();
@@ -21,7 +34,6 @@ class Order {
     }
 
     printBrand() {
-        console.log(this.json);
         let self = this;
         this.brandSelect.innerHTML = "";
         let brands = new FormData();
@@ -91,6 +103,23 @@ class Order {
                             map.setCenter([element["latitude"], element["longitude"]], 15, {
                                 checkZoomRange: true
                             });
+                            self.home.appendChild(self.datePicker);
+                            $('#datePicker').datepicker({
+                                minDate: new Date(new Date().setDate(new Date().getDate() + 1)),
+                                language: {
+                                    dateFormat: 'yyyy-mm-dd'
+                                },
+                                onSelect: function (formattedDatestring, date, inst) {
+                                    if (date.length == 2) {
+                                        console.log(date);
+                                        var timeDiff = Math.abs(date[1].getTime() - date[0].getTime());
+                                        console.log(element["cost_per_day"] * (Math.ceil(timeDiff / (1000 * 3600 * 24)) + 1));
+
+
+                                    }
+                                }
+                                
+                            });
                         },
                         function (err) {
                             console.log(err);
@@ -101,6 +130,9 @@ class Order {
             }
         });
         this.home.appendChild(this.colorSelect);
+    }
+
+    printDate() {
     }
 
 
