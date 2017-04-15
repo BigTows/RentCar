@@ -46,15 +46,17 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
+
                                 {foreach from=$profile->getOrders() item=foo}
-                                    <td>{$foo["id_order"]}</td>
-                                    <td>{$foo["brand"]}</td>
-                                    <td>{$foo["model"]}</td>
-                                    <td>{$foo["date_begin"]}</td>
-                                    <td>{$foo["date_end"]}</td>
+                                    <tr>
+                                        <td>{$foo["id_order"]}</td>
+                                        <td>{$foo["brand"]}</td>
+                                        <td>{$foo["model"]}</td>
+                                        <td>{$foo["date_begin"]}</td>
+                                        <td>{$foo["date_end"]}</td>
+                                    </tr>
                                 {/foreach}
-                            </tr>
+
                             </tbody>
 
                         </table>

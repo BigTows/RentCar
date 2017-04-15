@@ -55,8 +55,6 @@ class Order {
         option.selected = true;
         option.disabled = true;
         this.brandSelect.appendChild(option);
-        console.log(brands);
-        console.log("sd");
         this.json.data.forEach(function (element) {
             if (brands.get(element["name_brand"]) === null) {
                 option = document.createElement("option");
@@ -116,6 +114,7 @@ class Order {
                             map.setCenter([element["latitude"], element["longitude"]], 15, {
                                 checkZoomRange: true
                             });
+                            console.log(element);
                             self.home.appendChild(self.datePicker);
                             $('#datePicker').datepicker({
                                 minDate: new Date(new Date().setDate(new Date().getDate() + 1)),
@@ -123,14 +122,35 @@ class Order {
                                     dateFormat: 'yyyy-mm-dd'
                                 },
                                 onSelect: function (formattedDatestring, date, inst) {
-                                    if (date.length == 2) {
+                                    if (date.length != 2) {
+                                        self.price.remove()
+                                    } else {
                                         //console.log(date);
                                         var timeDiff = Math.abs(date[1].getTime() - date[0].getTime());
                                         var day = (Math.ceil(timeDiff / (1000 * 3600 * 24)) + 1);
-                                        self.price.innerHTML = "Цена за " + day + " дней, составляет " + element["cost_per_day"] * day + "<a class='btn btn-primary'> Купить </a>";
-                                        self.home.append(self.price);
-                                    } else {
-                                        self.price.remove()
+                                        self.price.innerHTML = "Цена за " + day + " дней, составляет " + element["cost_per_day"] * day + " <span class='glyphicon glyphicon-ruble'> </span>";
+                                        var btnBuy = document.createElement("a");
+                                        btnBuy.innerHTML = "Купить";
+                                        btnBuy.onclick = function () {
+                                            var xhr = new XMLHttpRequest();
+                                            var data = new FormData();
+                                            data.append("order", "");
+                                            console.log(date[0]);
+                                            data.append("data", JSON.stringify({
+                                                "date_begin": date[0].getFullYear() + "-" + (date[0].getMonth() + 1) + "-" + date[0].getDate(),
+                                                "date_end": date[1].getFullYear() + "-" + (date[1].getMonth() + 1) + "-" + date[1].getDate(),
+                                                "id_rolling_car": element['id_rolling_car']
+                                            }));
+                                            xhr.open("POST", "/cars/application/requests/user.php");
+                                            xhr.onreadystatechange = function () {
+                                                if (this.readyState == 4 && this.status == 200) {
+                                                    console.log(this.responseText);
+                                                }
+                                            };
+                                            xhr.send(data);
+                                        };
+                                        self.price.appendChild(btnBuy);
+                                        self.home.appendChild(self.price);
                                     }
 
                                 }

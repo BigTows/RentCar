@@ -39,20 +39,20 @@ if (isset($_POST['getProfile'])) {
         $input = "";
         $values = "";
         $valuesArray = [];
+        $valuesArray += array("id_user" => $user->getId());
         $dataArray = json_decode($_POST['data'], true);
         foreach ($dataArray as $item => $key) {
-            $input = $input . "`" . $item . "`,";
             $values = $values . ":" . $item . ",";
             $valuesArray += array($item => $key);
-
         }
         $input = rtrim($input, ",");
         $values = rtrim($values, ",");
 
-        $querySQL = "INSERT INTO Orders (" . $input . ") VALUES (" . $values . ")";
+        $querySQL = "call Rent (:id_user," . $values . ")";
+        echo $querySQL;
         $statement = $DBConnect->sendQuery($querySQL, $valuesArray);
         if ($DBConnect->hasError()) {
-            $response = new Response("Произошла ошибка", "", [], 2);
+            $response = new Response("Произошла ошибка", "", $statement->errorInfo(), 2);
         } else {
             $response = new Response("Заказ обработан!", "", [], 0);
         }

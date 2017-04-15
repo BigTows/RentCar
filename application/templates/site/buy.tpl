@@ -31,7 +31,6 @@
                                 });
                             }
                             new Order(document.getElementById("orderPanel"));
-                            console.log("as");
                         </script>
                     </div>
                 </div>
