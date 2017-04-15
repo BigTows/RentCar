@@ -1,3 +1,7 @@
+/**
+ * Not support mobile platform
+ * and Safari (omg)
+ */
 class Order {
     constructor(elem) {
         this.home = elem;
@@ -25,7 +29,7 @@ class Order {
         this.xhr.open("POST", "/cars/application/requests/user.php");
         const data = new FormData();
         data.append("getFreeCars", "");
-        let self = this;
+        var self = this;
         this.xhr.onreadystatechange = function () {
             if (this.status === 200 && this.readyState === 4) {
                 self.json = JSON.parse(this.responseText);
@@ -36,9 +40,9 @@ class Order {
     }
 
     printBrand() {
-        let self = this;
+        var self = this;
         this.brandSelect.innerHTML = "";
-        let brands = new FormData();
+        var brands = new FormData();
         this.brandSelect.onchange = function () {
             self.brand = self.brandSelect.value;
             self.printModels();
@@ -46,12 +50,13 @@ class Order {
             self.price.remove();
             self.datePicker.remove();
         };
-        let option = document.createElement("option");
+        var option = document.createElement("option");
         option.textContent = "Выберите Бренд";
         option.selected = true;
         option.disabled = true;
         this.brandSelect.appendChild(option);
-
+        console.log(brands);
+        console.log("sd");
         this.json.data.forEach(function (element) {
             if (brands.get(element["name_brand"]) === null) {
                 option = document.createElement("option");
@@ -66,21 +71,21 @@ class Order {
 
     printModels() {
         this.modelSelect.innerHTML = "";
-        let self = this;
-        let models = new FormData();
+        var self = this;
+        var models = new FormData();
         this.modelSelect.onchange = function () {
             self.car = self.modelSelect.value;
             self.datePicker.remove();
             self.price.remove();
             self.printColors();
         };
-        let option = document.createElement("option");
+        var option = document.createElement("option");
         option.textContent = "Выберите Марку";
         option.selected = true;
         option.disabled = true;
         this.modelSelect.appendChild(option);
         this.json.data.forEach(function (element) {
-            let option = document.createElement("option");
+            var option = document.createElement("option");
             if (element["id_brand"] === self.brand && models.get(element["model"]) === null) {
                 option.value = element["model"];
                 option.textContent = element["model"] + " (За сутки " + element['cost_per_day'] + ")";
@@ -93,11 +98,11 @@ class Order {
 
     printColors() {
         this.colorSelect.innerHTML = "";
-        let self = this;
+        var self = this;
         this.json.data.forEach(function (element) {
 
             if (element["id_brand"] === self.brand && element["model"] === self.car) {
-                let divColor = document.createElement("div");
+                var divColor = document.createElement("div");
                 divColor.style.backgroundColor = "#" + element["hex_color"];
                 divColor.className = "color-pick";
                 divColor.onclick = function () {
