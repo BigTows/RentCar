@@ -8,7 +8,21 @@ require '../configs/database.connect.php';
 require 'response.php';
 $DBConnect->setDebug(false);
 $user = new User($DBConnect, session_id());
-if (isset($_POST['getFreeCars'])) {
+if (isset($_POST['getProfile'])) {
+    if ($user->havePerm("view_profile")) {
+        $querySQL = "SELECT * FROM Profile WHERE id_user = :id";
+        $statement = $DBConnect->sendQuery($querySQL, [
+            "id" => $user->getId()
+        ]);
+        if ($DBConnect->hasError()) {
+            $response = new Response("Произошла ошибка", $statement->errorInfo(), [], 2);
+        } else {
+            $response = new Response("Данные профиля переданны.", "", $statement->fetchAll(PDO::FETCH_OBJ), 0);
+        }
+    } else {
+        $response = new Response("У вас нет прав для просмотра профиля!", "", [], 2);
+    }
+} else if (isset($_POST['getFreeCars'])) {
     if ($user->havePerm("view_free_cars")) {
         $QuerySQL = "SELECT * FROM freeCars";
         $statement = $DBConnect->sendQuery($QuerySQL);

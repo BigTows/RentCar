@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-15 10:32:19
+/* Smarty version 3.1.30, created on 2017-04-11 18:32:43
   from "/var/www/html/cars/application/templates/adminpanel/head.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58c8ee03857b37_14733354',
+    'unifunc' => 'content_58ecf71b3a2e75_94268223',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8b2d81ede0a8bb16120a6ee8c159c8351472d50a' => 
     array (
       0 => '/var/www/html/cars/application/templates/adminpanel/head.tpl',
-      1 => 1489527188,
+        1 => 1491721844,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58c8ee03857b37_14733354 (Smarty_Internal_Template $_smarty_tpl) {
+    function content_58ecf71b3a2e75_94268223(Smarty_Internal_Template $_smarty_tpl)
+    {
 ?>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-04-09 13:59:01
+/* Smarty version 3.1.30, created on 2017-04-11 22:30:31
   from "/var/www/html/cars/application/templates/site/buy.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-    'unifunc' => 'content_58ea13f5405a90_00559783',
+    'unifunc' => 'content_58ed2ed74e8a98_65321380',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bcf6bca5a450d6d177c843f1c2d866ae746d4100' => 
     array (
       0 => '/var/www/html/cars/application/templates/site/buy.tpl',
-        1 => 1491735537,
+        1 => 1491939030,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:container.tpl' => 1,
   ),
 ),false)) {
-    function content_58ea13f5405a90_00559783(Smarty_Internal_Template $_smarty_tpl)
+    function content_58ed2ed74e8a98_65321380(Smarty_Internal_Template $_smarty_tpl)
     {
 ?>
 <!DOCTYPE html>
@@ -42,6 +42,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
 <?php echo '<script'; ?>
 src="../cars/media/JavaScript/Order.js"><?php echo '</script'; ?>
 >
+<link rel="stylesheet" href="../cars/media/style/datepicker.min.css">
+<?php echo '<script'; ?>
+src="../cars/media/JavaScript/datepicker.min.js"><?php echo '</script'; ?>
+>
 <?php echo '<script'; ?>
 src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"><?php echo '</script'; ?>
 >
@@ -53,19 +57,14 @@ src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"><?php ec
         <div class="row">
             <div class="form-group">
                 <div class="col-md-6 col-xs-12" id="orderPanel">
-                    <select id="brands"></select>
-                    <select id="models"></select>
-                    <div id="div-colors">
 
                     </div>
-                </div>
                 <div class="col-md-6 col-xs-12">
                     <div id="map" style="width: auto; height: 400px"></div>
                     <?php echo '<script'; ?>
                     >
                     ymaps.ready(init);
-                    var map;
-
+                    let map;
                     function init() {
                     map = new ymaps.Map("map", {
                     center: [55.76, 37.64],
@@ -77,6 +76,7 @@ src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"><?php ec
                     >
                 </div>
             </div>
+
         </div>
 
     </div>

@@ -23,6 +23,7 @@ $smarty->assign("data", $data);
  */
 function getPage($response)
 {
+    global $user;
     $pages = [
         "index" => "main.tpl",
         "add" => "add.tpl",
@@ -34,11 +35,14 @@ function getPage($response)
         "buy" => "buy.tpl",
         "profile" => "profile.tpl"
     ];
+
     $response['temp'] = $response['temp'] ?? "index";
-    if ($pagesWithAccess[$response['temp']] ?? false) {
-        global $user;
-        return ($user->havePerm("page_" . $response['temp'])) ? $pagesWithAccess[$response['temp']] : "permissions.tpl";
-    }
+    if ($user->isLoggin() && $response['temp'] == "auth") {
+        return "profile.tpl";
+    } else
+        if ($pagesWithAccess[$response['temp']] ?? false) {
+            return ($user->havePerm("page_" . $response['temp'])) ? $pagesWithAccess[$response['temp']] : "permissions.tpl";
+        }
     return $pages[$response['temp']] ?? "404.tpl";
 }
 

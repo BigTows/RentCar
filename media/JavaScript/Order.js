@@ -22,7 +22,7 @@ class Order {
         this.price = document.createElement("p");
 
         this.xhr = new XMLHttpRequest();
-        this.xhr.open("POST", "/cars/application/requests/buy.php");
+        this.xhr.open("POST", "/cars/application/requests/user.php");
         const data = new FormData();
         data.append("getFreeCars", "");
         let self = this;
