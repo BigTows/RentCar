@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99525af5-63fa-42e9-812e-78ac73583970" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/classes/profile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/cars.iml" afterPath="$PROJECT_DIR$/.idea/cars.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/configs/smarty.site.config.php" afterPath="$PROJECT_DIR$/application/configs/smarty.site.config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/Smarty.class.php" afterPath="$PROJECT_DIR$/application/libs/Smarty.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_configfileparser.php" afterPath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_configfileparser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templatecompilerbase.php" afterPath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templatecompilerbase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templatelexer.php" afterPath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templatelexer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templateparser.php" afterPath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templateparser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/ready/43b170b1686209107a5205a9bc65195f754321ff_0.file.profile.tpl.php" afterPath="$PROJECT_DIR$/application/templates/ready/43b170b1686209107a5205a9bc65195f754321ff_0.file.profile.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/site/buy.tpl" afterPath="$PROJECT_DIR$/application/templates/site/buy.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/site/head.tpl" afterPath="$PROJECT_DIR$/application/templates/site/head.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/profile.php" afterPath="$PROJECT_DIR$/application/classes/profile.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/site/profile.tpl" afterPath="$PROJECT_DIR$/application/templates/site/profile.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/JavaScript/Order.js" afterPath="$PROJECT_DIR$/media/JavaScript/Order.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,34 +19,36 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="smarty.config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/configs/smarty.config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="smarty.adminpanel.config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/configs/smarty.adminpanel.config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="smarty.site.config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/configs/smarty.site.config.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="966">
-              <caret line="65" column="36" lean-forward="false" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
+              <caret line="67" column="36" lean-forward="false" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
               <folding>
-                <marker date="1492277558000" expanded="true" signature="1412:1455" ph="SELECT COUNT... Roles_perm" />
+                <marker date="1492277980000" expanded="true" signature="1416:1459" ph="SELECT COUNT... Roles_perm" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.tpl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/templates/site/profile.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="840">
+              <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#h3#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nav.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/templates/site/nav.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="46" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -65,10 +56,35 @@
       <file leaf-file-name="profile.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/classes/profile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" column="32" lean-forward="false" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="32" />
+            <state relative-caret-position="1086">
+              <caret line="98" column="5" lean-forward="false" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
               <folding>
-                <marker date="1492277505000" expanded="true" signature="520:559" ph="SELECT * FRO... Profile" />
+                <marker date="1492279065000" expanded="true" signature="583:622" ph="SELECT * FRO... Profile" />
+                <marker date="1492279065000" expanded="true" signature="1032:1079" ph="SELECT * FRO... Relevant_orders" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="response.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/requests/response.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="33" column="28" lean-forward="false" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/requests/user.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+              <folding>
+                <marker date="1492243174000" expanded="true" signature="334:375" ph="SELECT * FRO... Users" />
+                <marker date="1492243174000" expanded="true" signature="962:984" ph="SELECT * FRO... freeCars" />
+                <marker date="1492243174000" expanded="true" signature="1944:2004" ph="INSERT INTO ${$_POST['addRecord']}... " />
               </folding>
             </state>
           </provider>
@@ -84,23 +100,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.tpl" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/templates/site/profile.tpl">
+      <file leaf-file-name="user.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/classes/user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="10" lean-forward="true" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
-              <folding />
+            <state relative-caret-position="1125">
+              <caret line="118" column="25" lean-forward="false" selection-start-line="118" selection-start-column="25" selection-end-line="118" selection-end-column="25" />
+              <folding>
+                <marker date="1491939097000" expanded="true" signature="309:496" ph="SELECT COUNT... " />
+                <marker date="1491939097000" expanded="true" signature="1145:1246" ph="INSERT INTO User_session... " />
+                <marker date="1491939097000" expanded="true" signature="1247:1273" ph="UPDATE sessi... " />
+                <marker date="1491939097000" expanded="true" signature="1644:1740" ph="SELECT COUNT... " />
+                <marker date="1491939097000" expanded="true" signature="2170:2282" ph="SELECT perm Roles_perm" />
+                <marker date="1491939097000" expanded="true" signature="2205:2263" ph="SELECT Users... Users" />
+                <marker date="1491939097000" expanded="true" signature="3051:3233" ph="INSERT INTO `Users`... " />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Table.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/media/JavaScript/Table.js">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/requests/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="74" column="30" lean-forward="false" selection-start-line="74" selection-start-column="30" selection-end-line="74" selection-end-column="30" />
+            <state relative-caret-position="781">
+              <caret line="121" column="12" lean-forward="true" selection-start-line="121" selection-start-column="12" selection-end-line="121" selection-end-column="49" />
               <folding>
-                <marker date="1490962406000" expanded="true" signature="2697:2722" ph="..." />
+                <marker date="1491717830000" expanded="true" signature="1856:1870" ph="SELECT * FRO... ${$_POST['getTable']}" />
+                <marker date="1491717830000" expanded="true" signature="2865:2946" ph="INSERT INTO ${$_POST['addRecord']}... " />
+                <marker date="1491717830000" expanded="true" signature="5235:5284" ph="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -111,16 +137,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
               <caret line="14" column="32" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="14" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="head.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/templates/site/head.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="95" lean-forward="false" selection-start-line="7" selection-start-column="95" selection-end-line="7" selection-end-column="95" />
               <folding />
             </state>
           </provider>
@@ -205,8 +221,8 @@
         <option value="$PROJECT_DIR$/application/templates/site/head.tpl" />
         <option value="$PROJECT_DIR$/application/templates/site/buy.tpl" />
         <option value="$PROJECT_DIR$/media/JavaScript/Order.js" />
-        <option value="$PROJECT_DIR$/application/classes/profile.php" />
         <option value="$PROJECT_DIR$/application/configs/smarty.site.config.php" />
+        <option value="$PROJECT_DIR$/application/classes/profile.php" />
         <option value="$PROJECT_DIR$/application/templates/site/profile.tpl" />
       </list>
     </option>
@@ -559,7 +575,7 @@
       <workItem from="1491924700821" duration="9554000" />
       <workItem from="1492099657866" duration="1923000" />
       <workItem from="1492239699185" duration="2639000" />
-      <workItem from="1492272138566" duration="4349000" />
+      <workItem from="1492272138566" duration="6448000" />
     </task>
     <task id="LOCAL-00001" summary="version 0.4">
       <created>1490710651966</created>
@@ -687,11 +703,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492243212579</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="update Profile module. (Add class profile)">
+      <created>1492277989121</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1492277989121</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115046000" />
+    <option name="totallyTimeSpent" value="117145000" />
   </component>
   <component name="TodoView" selected-index="5">
     <todo-panel id="selected-file">
@@ -747,7 +770,8 @@
     <MESSAGE value="add DatePicker" />
     <MESSAGE value="update Order page" />
     <MESSAGE value="Fix auth page on Loggin status. Add profile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix auth page on Loggin status. Add profile" />
+    <MESSAGE value="update Profile module. (Add class profile)" />
+    <option name="LAST_COMMIT_MESSAGE" value="update Profile module. (Add class profile)" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -756,13 +780,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/templates/adminpanel/404.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/templates/adminpanel/stats.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -802,13 +819,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-457">
           <caret line="40" column="38" lean-forward="false" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/requests/response.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="33" column="28" lean-forward="false" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -918,18 +928,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/requests/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="74" column="9" lean-forward="false" selection-start-line="55" selection-start-column="7" selection-end-line="74" selection-end-column="9" />
-          <folding>
-            <marker date="1491717830000" expanded="true" signature="1856:1870" ph="SELECT * FRO... ${$_POST['getTable']}" />
-            <marker date="1491717830000" expanded="true" signature="2865:2946" ph="INSERT INTO ${$_POST['addRecord']}... " />
-            <marker date="1491717830000" expanded="true" signature="5235:5284" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/configs/project.config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -982,6 +980,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1000,18 +999,6 @@
         <state relative-caret-position="120">
           <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/requests/user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-          <folding>
-            <marker date="1492243174000" expanded="true" signature="334:375" ph="SELECT * FRO... Users" />
-            <marker date="1492243174000" expanded="true" signature="962:984" ph="SELECT * FRO... freeCars" />
-            <marker date="1492243174000" expanded="true" signature="1944:2004" ph="INSERT INTO ${$_POST['addRecord']}... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1036,22 +1023,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/classes/user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1770">
-          <caret line="118" column="25" lean-forward="false" selection-start-line="118" selection-start-column="25" selection-end-line="118" selection-end-column="25" />
-          <folding>
-            <marker date="1491939097000" expanded="true" signature="309:496" ph="SELECT COUNT... " />
-            <marker date="1491939097000" expanded="true" signature="1145:1246" ph="INSERT INTO User_session... " />
-            <marker date="1491939097000" expanded="true" signature="1247:1273" ph="UPDATE sessi... " />
-            <marker date="1491939097000" expanded="true" signature="1644:1740" ph="SELECT COUNT... " />
-            <marker date="1491939097000" expanded="true" signature="2170:2282" ph="SELECT perm Roles_perm" />
-            <marker date="1491939097000" expanded="true" signature="2205:2263" ph="SELECT Users... Users" />
-            <marker date="1491939097000" expanded="true" signature="3051:3233" ph="INSERT INTO `Users`... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1105,20 +1076,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/classes/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/configs/smarty.site.config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="966">
-          <caret line="65" column="36" lean-forward="false" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
+          <caret line="67" column="36" lean-forward="false" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
           <folding>
-            <marker date="1492277558000" expanded="true" signature="1412:1455" ph="SELECT COUNT... Roles_perm" />
+            <marker date="1492277980000" expanded="true" signature="1416:1459" ph="SELECT COUNT... Roles_perm" />
           </folding>
         </state>
       </provider>
@@ -1131,21 +1094,88 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/requests/response.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="33" column="28" lean-forward="false" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/requests/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+          <folding>
+            <marker date="1492243174000" expanded="true" signature="334:375" ph="SELECT * FRO... Users" />
+            <marker date="1492243174000" expanded="true" signature="962:984" ph="SELECT * FRO... freeCars" />
+            <marker date="1492243174000" expanded="true" signature="1944:2004" ph="INSERT INTO ${$_POST['addRecord']}... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/requests/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="781">
+          <caret line="121" column="12" lean-forward="true" selection-start-line="121" selection-start-column="12" selection-end-line="121" selection-end-column="49" />
+          <folding>
+            <marker date="1491717830000" expanded="true" signature="1856:1870" ph="SELECT * FRO... ${$_POST['getTable']}" />
+            <marker date="1491717830000" expanded="true" signature="2865:2946" ph="INSERT INTO ${$_POST['addRecord']}... " />
+            <marker date="1491717830000" expanded="true" signature="5235:5284" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/classes/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/classes/profile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="32" lean-forward="false" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="32" />
+        <state relative-caret-position="1086">
+          <caret line="98" column="5" lean-forward="false" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
           <folding>
-            <marker date="1492277505000" expanded="true" signature="520:559" ph="SELECT * FRO... Profile" />
+            <marker date="1492279065000" expanded="true" signature="583:622" ph="SELECT * FRO... Profile" />
+            <marker date="1492279065000" expanded="true" signature="1032:1079" ph="SELECT * FRO... Relevant_orders" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/site/nav.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="46" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/classes/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1125">
+          <caret line="118" column="25" lean-forward="false" selection-start-line="118" selection-start-column="25" selection-end-line="118" selection-end-column="25" />
+          <folding>
+            <marker date="1491939097000" expanded="true" signature="309:496" ph="SELECT COUNT... " />
+            <marker date="1491939097000" expanded="true" signature="1145:1246" ph="INSERT INTO User_session... " />
+            <marker date="1491939097000" expanded="true" signature="1247:1273" ph="UPDATE sessi... " />
+            <marker date="1491939097000" expanded="true" signature="1644:1740" ph="SELECT COUNT... " />
+            <marker date="1491939097000" expanded="true" signature="2170:2282" ph="SELECT perm Roles_perm" />
+            <marker date="1491939097000" expanded="true" signature="2205:2263" ph="SELECT Users... Users" />
+            <marker date="1491939097000" expanded="true" signature="3051:3233" ph="INSERT INTO `Users`... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/templates/site/profile.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="10" lean-forward="true" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
-          <folding />
+        <state relative-caret-position="840">
+          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#h3#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

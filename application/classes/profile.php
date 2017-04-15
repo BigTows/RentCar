@@ -16,12 +16,14 @@ class Profile
     private $telephone;
     private $email;
 
+    private $orders = array();
+
     function __construct($user, $DBConnect)
     {
         $this->user = $user;
         $this->DBConnect = $DBConnect;
         $this->setPersonalData();
-
+        $this->setOrdersData();
     }
 
     public function setPersonalData()
@@ -37,6 +39,21 @@ class Profile
         $this->email = $row['email'];
     }
 
+    public function setOrdersData()
+    {
+        $statment = $this->DBConnect->sendQuery("SELECT * FROM Relevant_orders WHERE id_user=:id", [
+                "id" => $this->user->getId()]
+        );
+        foreach ($statment->fetchAll() as $row) {
+            $order = [];
+            $order += array("id_order" => $row["id_order"]);
+            $order += array("date_begin" => $row["date_begin"]);
+            $order += array("date_end" => $row["date_end"]);
+            $order += array("model" => $row["model"]);
+            $order += array("brand" => $row["brand"]);
+            array_push($this->orders, $order);
+        }
+    }
     public function getFirstName()
     {
         return $this->firstName;
@@ -73,5 +90,14 @@ class Profile
     {
         return $this->telephone;
     }
+
+    /**
+     * @return array
+     */
+    public function getOrders(): array
+    {
+        return $this->orders;
+    }
+
 
 }
