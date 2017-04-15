@@ -12,12 +12,13 @@
 - Разграничение прав
 - Просматривать точки на геокарте
 - Заказывать машины
+- Просмотр своего профиля и заказов
 ## Интсрументы
 - Bootstrap 3
 - Smarty
 - MariaDB
 - Apache 2
 - Yandex Map
-
+- [AIR DATEPICKER](http://t1m0n.name/air-datepicker/docs/index-ru.html)
 ## ToDo лист
 - Оптимизация кода
