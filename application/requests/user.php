@@ -47,12 +47,9 @@ if (isset($_POST['getProfile'])) {
         }
         $input = rtrim($input, ",");
         $values = rtrim($values, ",");
-
-        $querySQL = "call Rent (:id_user," . $values . ")";
-        echo $querySQL;
-        $statement = $DBConnect->sendQuery($querySQL, $valuesArray);
+        $statement = $DBConnect->sendQuery("call Rent (:id_user," . $values . ")", $valuesArray);
         if ($DBConnect->hasError()) {
-            $response = new Response("Произошла ошибка", "", $statement->errorInfo(), 2);
+            $response = new Response("Данная машина занята.", "Видимо эту машину уже кто-то выбрал, обновите страницу и попробуйте заново!", [], 2);
         } else {
             $response = new Response("Заказ обработан!", "", [], 0);
         }

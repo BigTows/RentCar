@@ -144,7 +144,12 @@ class Order {
                                             xhr.open("POST", "/cars/application/requests/user.php");
                                             xhr.onreadystatechange = function () {
                                                 if (this.readyState == 4 && this.status == 200) {
-                                                    console.log(this.responseText);
+                                                    self.price.innerHTML = "";
+                                                    var panelInfo = document.createElement("div");
+                                                    panelInfo.className = ""
+                                                    var responseJSON = JSON.parse(this.responseText);
+                                                    printResponse(responseJSON, panelInfo);
+                                                    self.price.appendChild(panelInfo);
                                                 }
                                             };
                                             xhr.send(data);
