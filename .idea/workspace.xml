@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="99525af5-63fa-42e9-812e-78ac73583970" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/requests/statistic.php" afterPath="$PROJECT_DIR$/application/requests/statistic.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/adminpanel/main.tpl" afterPath="$PROJECT_DIR$/application/templates/adminpanel/main.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,12 +18,25 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.tpl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/templates/adminpanel/main.tpl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
               <caret line="24" column="54" lean-forward="true" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="105">
+                <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -35,8 +47,8 @@
             <state relative-caret-position="285">
               <caret line="19" column="78" lean-forward="false" selection-start-line="19" selection-start-column="78" selection-end-line="19" selection-end-column="78" />
               <folding>
-                <marker date="1492539155000" expanded="true" signature="467:480" ph="SELECT * FRO... " />
-                <marker date="1492539155000" expanded="true" signature="582:669" ph="SELECT COUNT... Orders" />
+                <marker date="1492539720000" expanded="true" signature="467:480" ph="SELECT * FRO... " />
+                <marker date="1492539720000" expanded="true" signature="582:669" ph="SELECT COUNT... Orders" />
               </folding>
             </state>
           </provider>
@@ -65,16 +77,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
               <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="control.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/templates/adminpanel/control.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="22" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -216,9 +218,9 @@
         <option value="$PROJECT_DIR$/application/configs/smarty.adminpanel.config.php" />
         <option value="$PROJECT_DIR$/application/templates/adminpanel/cars/index.tpl" />
         <option value="$PROJECT_DIR$/application/templates/adminpanel/control.tpl" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/application/requests/statistic.php" />
         <option value="$PROJECT_DIR$/application/templates/adminpanel/main.tpl" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -623,7 +625,7 @@
       <workItem from="1492239699185" duration="2639000" />
       <workItem from="1492272138566" duration="12027000" />
       <workItem from="1492508578386" duration="1077000" />
-      <workItem from="1492535491996" duration="3625000" />
+      <workItem from="1492535491996" duration="3689000" />
     </task>
     <task id="LOCAL-00001" summary="version 0.4">
       <created>1490710651966</created>
@@ -807,11 +809,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492537445825</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Added new static (Order)">
+      <created>1492539724204</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1492539724204</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127426000" />
+    <option name="totallyTimeSpent" value="127490000" />
   </component>
   <component name="TodoView" selected-index="5">
     <todo-panel id="selected-file">
@@ -875,7 +884,8 @@
     <MESSAGE value="Added redirect on  success auth" />
     <MESSAGE value="Added control page.&#10;Rename data in Smarty." />
     <MESSAGE value="Added tool for plotting Chart.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added tool for plotting Chart.js" />
+    <MESSAGE value="Added new static (Order)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new static (Order)" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1189,17 +1199,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="360">
-            <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/requests/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
@@ -1257,8 +1256,8 @@
         <state relative-caret-position="285">
           <caret line="19" column="78" lean-forward="false" selection-start-line="19" selection-start-column="78" selection-end-line="19" selection-end-column="78" />
           <folding>
-            <marker date="1492539155000" expanded="true" signature="467:480" ph="SELECT * FRO... " />
-            <marker date="1492539155000" expanded="true" signature="582:669" ph="SELECT COUNT... Orders" />
+            <marker date="1492539720000" expanded="true" signature="467:480" ph="SELECT * FRO... " />
+            <marker date="1492539720000" expanded="true" signature="582:669" ph="SELECT COUNT... Orders" />
           </folding>
         </state>
       </provider>
@@ -1278,6 +1277,17 @@
         <state relative-caret-position="360">
           <caret line="24" column="54" lean-forward="true" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="105">
+            <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
