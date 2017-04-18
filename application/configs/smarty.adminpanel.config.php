@@ -11,11 +11,13 @@ $data =[
         "nav"=>"Админ панель"
     ],
     "nav"=>[
-        "Главная"=>"/cars/admin"
+        "Главная" => "/cars/admin",
+        "Контроль машин" => "/cars/admin/control"
     ],
-    "navDropDown"=>[
+    "tables" => [
         "Машины"=>"/cars/admin/cars"
-    ]
+    ],
+    "footer" => "RentCar system by @BigTows"
 ];
 
 $smarty->assign("data",$data);
@@ -31,7 +33,8 @@ function getPage($response){
         "add"=>"add.tpl",
         "view"=>"view.tpl",
         "auth"=>"login.tpl",
-        "cars"=>"cars.tpl"
+        "cars" => "cars.tpl",
+        "control" => "control.tpl"
     ];
     global $user;
     if (!$user->havePerm("adminpanel")){

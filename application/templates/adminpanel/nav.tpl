@@ -17,11 +17,12 @@
                     <a class="dropdown-toggle" type="button" id="tables" data-toggle="dropdown">Таблицы
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="tables">
-                        {foreach from=$data.navDropDown item=link key=name}
+                        {foreach from=$data.tables item=link key=name}
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="{$link}">{$name}</a></li>
                         {/foreach}
                     </ul>
                 </li>
+
             </ul>
         </div>
     </div>

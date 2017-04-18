@@ -21,6 +21,6 @@
         </div>
     </div>
     <div class="panel-footer">
-        Test
+        {$data.footer}
     </div>
 </div>
