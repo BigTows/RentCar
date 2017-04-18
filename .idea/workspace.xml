@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99525af5-63fa-42e9-812e-78ac73583970" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/cars.iml" afterPath="$PROJECT_DIR$/.idea/cars.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/requests/user.php" afterPath="$PROJECT_DIR$/application/requests/user.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/configs/smarty.site.config.php" afterPath="$PROJECT_DIR$/application/configs/smarty.site.config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/Smarty.class.php" afterPath="$PROJECT_DIR$/application/libs/Smarty.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_configfileparser.php" afterPath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_configfileparser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templatecompilerbase.php" afterPath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templatecompilerbase.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templatelexer.php" afterPath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templatelexer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templateparser.php" afterPath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templateparser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/ready/352724bfa12a580c57b11c4c69ef5a30ae9a7234_0.file.head.tpl.php" afterPath="$PROJECT_DIR$/application/templates/ready/352724bfa12a580c57b11c4c69ef5a30ae9a7234_0.file.head.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/ready/43b170b1686209107a5205a9bc65195f754321ff_0.file.profile.tpl.php" afterPath="$PROJECT_DIR$/application/templates/ready/43b170b1686209107a5205a9bc65195f754321ff_0.file.profile.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/ready/bcf6bca5a450d6d177c843f1c2d866ae746d4100_0.file.buy.tpl.php" afterPath="$PROJECT_DIR$/application/templates/ready/bcf6bca5a450d6d177c843f1c2d866ae746d4100_0.file.buy.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/JavaScript/Order.js" afterPath="$PROJECT_DIR$/media/JavaScript/Order.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,22 +28,44 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="simulatorBuy.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/simulatorBuy.php">
+      <file leaf-file-name="Order.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/media/JavaScript/Order.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="34" column="56" lean-forward="false" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
+            <state relative-caret-position="1890">
+              <caret line="126" column="44" lean-forward="false" selection-start-line="126" selection-start-column="44" selection-end-line="126" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Order.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/media/JavaScript/Order.js">
+      <file leaf-file-name="smarty.config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/configs/smarty.config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="139" column="31" lean-forward="true" selection-start-line="139" selection-start-column="31" selection-end-line="139" selection-end-column="31" />
+            <state relative-caret-position="120">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="smarty.adminpanel.config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/configs/smarty.adminpanel.config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="11">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="smarty.site.config.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/configs/smarty.site.config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="34" column="6" lean-forward="true" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+              <folding>
+                <marker date="1492508948000" expanded="true" signature="1549:1592" ph="SELECT COUNT... Roles_perm" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -49,30 +80,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/templates/adminpanel/cars/index.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/templates/site/profile.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="56" column="41" lean-forward="false" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="user.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/requests/user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="741">
+            <state relative-caret-position="765">
               <caret line="51" column="59" lean-forward="false" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="59" />
               <folding>
                 <marker date="1492289930000" expanded="true" signature="334:375" ph="SELECT * FRO... Users" />
@@ -85,8 +96,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/requests/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="121" column="12" lean-forward="true" selection-start-line="121" selection-start-column="12" selection-end-line="121" selection-end-column="49" />
+            <state relative-caret-position="1815">
+              <caret line="121" column="12" lean-forward="false" selection-start-line="121" selection-start-column="12" selection-end-line="121" selection-end-column="49" />
               <folding>
                 <marker date="1491717830000" expanded="true" signature="1856:1870" ph="SELECT * FRO... ${$_POST['getTable']}" />
                 <marker date="1491717830000" expanded="true" signature="2865:2946" ph="INSERT INTO ${$_POST['addRecord']}... " />
@@ -99,7 +110,7 @@
       <file leaf-file-name="Table.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/media/JavaScript/Table.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="485">
+            <state relative-caret-position="1110">
               <caret line="74" column="30" lean-forward="false" selection-start-line="74" selection-start-column="30" selection-end-line="74" selection-end-column="30" />
               <folding>
                 <marker date="1490962406000" expanded="true" signature="2697:2722" ph="..." />
@@ -112,7 +123,7 @@
         <entry file="file://$PROJECT_DIR$/media/JavaScript/Binding.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="495">
-              <caret line="33" column="28" lean-forward="true" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+              <caret line="33" column="28" lean-forward="false" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -202,7 +213,6 @@
         <option value="$PROJECT_DIR$/media/JavaScript/Profile.js" />
         <option value="$PROJECT_DIR$/media/JavaScript/yMap.js" />
         <option value="$PROJECT_DIR$/application/templates/site/head.tpl" />
-        <option value="$PROJECT_DIR$/application/configs/smarty.site.config.php" />
         <option value="$PROJECT_DIR$/application/classes/profile.php" />
         <option value="$PROJECT_DIR$/application/util/messages.php" />
         <option value="$PROJECT_DIR$/README.md" />
@@ -210,6 +220,7 @@
         <option value="$PROJECT_DIR$/application/templates/site/profile.tpl" />
         <option value="$PROJECT_DIR$/application/requests/user.php" />
         <option value="$PROJECT_DIR$/media/JavaScript/Order.js" />
+        <option value="$PROJECT_DIR$/application/configs/smarty.site.config.php" />
       </list>
     </option>
   </component>
@@ -221,8 +232,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="width" value="3200" />
-    <option name="height" value="1800" />
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -242,7 +253,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -463,7 +474,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -501,17 +512,6 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
-      <PhpTestRunnerSettings />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
-      <node-interpreter value="project" />
-      <working-dir value="" />
-      <envs />
-      <scope-kind value="ALL" />
-      <method />
-    </configuration>
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
       <config-file value="" />
       <node-interpreter value="project" />
@@ -609,7 +609,8 @@
       <workItem from="1491924700821" duration="9554000" />
       <workItem from="1492099657866" duration="1923000" />
       <workItem from="1492239699185" duration="2639000" />
-      <workItem from="1492272138566" duration="11547000" />
+      <workItem from="1492272138566" duration="12027000" />
+      <workItem from="1492508578386" duration="343000" />
     </task>
     <task id="LOCAL-00001" summary="version 0.4">
       <created>1490710651966</created>
@@ -765,11 +766,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492289239366</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Added notification about order processing.">
+      <created>1492290192300</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1492290192300</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122244000" />
+    <option name="totallyTimeSpent" value="123067000" />
   </component>
   <component name="TodoView" selected-index="5">
     <todo-panel id="selected-file">
@@ -781,27 +789,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="3200" height="1800" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1690625" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16875" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299428" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2859097" sideWeight="0.5013889" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32686824" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299428" sideWeight="0.49861112" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32686824" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -829,7 +837,8 @@
     <MESSAGE value="update Profile template." />
     <MESSAGE value="update ReadMe" />
     <MESSAGE value="update Order Module.&#10;Add protection from re-booking." />
-    <option name="LAST_COMMIT_MESSAGE" value="update Order Module.&#10;Add protection from re-booking." />
+    <MESSAGE value="Added notification about order processing." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added notification about order processing." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -982,7 +991,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="41" column="115" lean-forward="false" selection-start-line="41" selection-start-column="103" selection-end-line="41" selection-end-column="115" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -997,7 +1005,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1005,57 +1012,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/media/JavaScript/yMap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/media/JavaScript/Profile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/media/JavaScript/yMap.js" />
+    <entry file="file://$PROJECT_DIR$/media/JavaScript/Profile.js" />
     <entry file="file://$PROJECT_DIR$/application/templates/site/head.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="95" lean-forward="false" selection-start-line="7" selection-start-column="95" selection-end-line="7" selection-end-column="95" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/configs/smarty.config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/configs/smarty.adminpanel.config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/configs/smarty.site.config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="67" column="36" lean-forward="false" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
-          <folding>
-            <marker date="1492277980000" expanded="true" signature="1416:1459" ph="SELECT COUNT... Roles_perm" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1082,7 +1047,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="46" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1090,7 +1054,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="24" lean-forward="false" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1107,7 +1070,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="345">
             <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1117,7 +1079,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8427">
           <caret line="757" column="12" lean-forward="false" selection-start-line="757" selection-start-column="12" selection-end-line="757" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1125,7 +1086,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1155,7 +1115,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/templates/site/profile.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
+        <state relative-caret-position="840">
           <caret line="56" column="41" lean-forward="false" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
           <folding />
         </state>
@@ -1180,14 +1140,14 @@
     <entry file="file://$PROJECT_DIR$/media/JavaScript/Binding.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
-          <caret line="33" column="28" lean-forward="true" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+          <caret line="33" column="28" lean-forward="false" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/media/JavaScript/Table.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
+        <state relative-caret-position="1110">
           <caret line="74" column="30" lean-forward="false" selection-start-line="74" selection-start-column="30" selection-end-line="74" selection-end-column="30" />
           <folding>
             <marker date="1490962406000" expanded="true" signature="2697:2722" ph="..." />
@@ -1213,8 +1173,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/requests/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="121" column="12" lean-forward="true" selection-start-line="121" selection-start-column="12" selection-end-line="121" selection-end-column="49" />
+        <state relative-caret-position="1815">
+          <caret line="121" column="12" lean-forward="false" selection-start-line="121" selection-start-column="12" selection-end-line="121" selection-end-column="49" />
           <folding>
             <marker date="1491717830000" expanded="true" signature="1856:1870" ph="SELECT * FRO... ${$_POST['getTable']}" />
             <marker date="1491717830000" expanded="true" signature="2865:2946" ph="INSERT INTO ${$_POST['addRecord']}... " />
@@ -1225,7 +1185,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/requests/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
+        <state relative-caret-position="765">
           <caret line="51" column="59" lean-forward="false" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="59" />
           <folding>
             <marker date="1492289930000" expanded="true" signature="334:375" ph="SELECT * FRO... Users" />
@@ -1236,9 +1196,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/media/JavaScript/Order.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="139" column="31" lean-forward="true" selection-start-line="139" selection-start-column="31" selection-end-line="139" selection-end-column="31" />
+        <state relative-caret-position="1890">
+          <caret line="126" column="44" lean-forward="false" selection-start-line="126" selection-start-column="44" selection-end-line="126" selection-end-column="44" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/configs/smarty.config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/configs/smarty.adminpanel.config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/configs/smarty.site.config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="34" column="6" lean-forward="true" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+          <folding>
+            <marker date="1492508948000" expanded="true" signature="1549:1592" ph="SELECT COUNT... Roles_perm" />
+          </folding>
         </state>
       </provider>
     </entry>

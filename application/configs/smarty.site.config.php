@@ -35,8 +35,9 @@ function getPage($response)
     ];
 
     $response['temp'] = $response['temp'] ?? "index";
-
-    if (needPerm($response['temp'])) {
+    if ($user->havePerm("not_" . $response['temp'])) {
+        return $pages["index"];
+    } else if (needPerm($response['temp'])) {
         if ($user->havePerm("page_" . $response['temp'])) {
             assign($response['temp']);
             return $pages[$response['temp']] ?? "404.tpl";
@@ -70,4 +71,5 @@ function assign($page)
 
     }
 }
+
 ?>

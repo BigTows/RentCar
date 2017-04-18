@@ -125,7 +125,6 @@ class Order {
                                     if (date.length != 2) {
                                         self.price.remove()
                                     } else {
-                                        //console.log(date);
                                         var timeDiff = Math.abs(date[1].getTime() - date[0].getTime());
                                         var day = (Math.ceil(timeDiff / (1000 * 3600 * 24)) + 1);
                                         self.price.innerHTML = "Цена за " + day + " дней, составляет " + element["cost_per_day"] * day + " <span class='glyphicon glyphicon-ruble'> </span>";
