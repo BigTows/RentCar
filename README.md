@@ -20,5 +20,6 @@
 - Apache 2
 - Yandex Map
 - [AIR DATEPICKER](http://t1m0n.name/air-datepicker/docs/index-ru.html)
+- [Chart.js](http://www.chartjs.org/)
 ## ToDo лист
 - Оптимизация кода

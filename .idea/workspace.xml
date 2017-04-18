@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99525af5-63fa-42e9-812e-78ac73583970" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/templates/adminpanel/control.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/cars.iml" afterPath="$PROJECT_DIR$/.idea/cars.iml" />
+    <list default="true" id="99525af5-63fa-42e9-812e-78ac73583970" name="Default" comment="Added">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/requests/statistic.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/configs/smarty.adminpanel.config.php" afterPath="$PROJECT_DIR$/application/configs/smarty.adminpanel.config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/Smarty.class.php" afterPath="$PROJECT_DIR$/application/libs/Smarty.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_configfileparser.php" afterPath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_configfileparser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templatecompilerbase.php" afterPath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templatecompilerbase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templatelexer.php" afterPath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templatelexer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templateparser.php" afterPath="$PROJECT_DIR$/application/libs/sysplugins/smarty_internal_templateparser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/adminpanel/cars/index.tpl" afterPath="$PROJECT_DIR$/application/templates/adminpanel/cars/index.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/adminpanel/nav.tpl" afterPath="$PROJECT_DIR$/application/templates/adminpanel/nav.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/ready/bcf6bca5a450d6d177c843f1c2d866ae746d4100_0.file.buy.tpl.php" afterPath="$PROJECT_DIR$/application/templates/ready/bcf6bca5a450d6d177c843f1c2d866ae746d4100_0.file.buy.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/JavaScript/Order.js" afterPath="$PROJECT_DIR$/media/JavaScript/Order.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/adminpanel/main.tpl" afterPath="$PROJECT_DIR$/application/templates/adminpanel/main.tpl" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,11 +20,44 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="smarty.adminpanel.config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/configs/smarty.adminpanel.config.php">
+      <file leaf-file-name="main.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/templates/adminpanel/main.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="11" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="11" />
+            <state relative-caret-position="675">
+              <caret line="45" column="30" lean-forward="false" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="statistic.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/requests/statistic.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="360">
+                <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="head.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/templates/adminpanel/head.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -42,9 +66,33 @@
       <file leaf-file-name="control.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/templates/adminpanel/control.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="26" />
+            <state relative-caret-position="60">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="22" selection-end-column="25" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="404.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/templates/adminpanel/404.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="44" lean-forward="false" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/requests/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="11" selection-end-column="43" />
+              <folding>
+                <marker date="1491717830000" expanded="true" signature="1856:1870" ph="SELECT * FRO... ${$_POST['getTable']}" />
+                <marker date="1491717830000" expanded="true" signature="2865:2946" ph="INSERT INTO ${$_POST['addRecord']}... " />
+                <marker date="1491717830000" expanded="true" signature="5235:5284" ph="DELETE FROM " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,7 +107,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.tpl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/templates/adminpanel/cars/index.tpl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
@@ -74,16 +122,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
               <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nav.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/templates/adminpanel/nav.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -120,8 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/templates/adminpanel/main.tpl" />
-        <option value="$PROJECT_DIR$/admin/.htaccess" />
         <option value="$PROJECT_DIR$/application/templates/adminpanel/404.tpl" />
         <option value="$PROJECT_DIR$/application/templates/adminpanel/cars.tpl" />
         <option value="$PROJECT_DIR$/application/classes/database.php" />
@@ -161,7 +197,6 @@
         <option value="$PROJECT_DIR$/application/templates/site/head.tpl" />
         <option value="$PROJECT_DIR$/application/classes/profile.php" />
         <option value="$PROJECT_DIR$/application/util/messages.php" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/application/templates/site/profile.tpl" />
         <option value="$PROJECT_DIR$/application/requests/user.php" />
         <option value="$PROJECT_DIR$/application/configs/smarty.site.config.php" />
@@ -169,8 +204,11 @@
         <option value="$PROJECT_DIR$/application/templates/site/buy.tpl" />
         <option value="$PROJECT_DIR$/application/templates/adminpanel/nav.tpl" />
         <option value="$PROJECT_DIR$/application/configs/smarty.adminpanel.config.php" />
-        <option value="$PROJECT_DIR$/application/templates/adminpanel/control.tpl" />
         <option value="$PROJECT_DIR$/application/templates/adminpanel/cars/index.tpl" />
+        <option value="$PROJECT_DIR$/application/templates/adminpanel/control.tpl" />
+        <option value="$PROJECT_DIR$/application/templates/adminpanel/main.tpl" />
+        <option value="$PROJECT_DIR$/application/requests/statistic.php" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -575,7 +613,7 @@
       <workItem from="1492239699185" duration="2639000" />
       <workItem from="1492272138566" duration="12027000" />
       <workItem from="1492508578386" duration="1077000" />
-      <workItem from="1492535491996" duration="798000" />
+      <workItem from="1492535491996" duration="1521000" />
     </task>
     <task id="LOCAL-00001" summary="version 0.4">
       <created>1490710651966</created>
@@ -745,11 +783,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492509079542</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Added control page.&#10;Rename data in Smarty.">
+      <created>1492536583507</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1492536583507</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124599000" />
+    <option name="totallyTimeSpent" value="125322000" />
   </component>
   <component name="TodoView" selected-index="5">
     <todo-panel id="selected-file">
@@ -811,7 +856,8 @@
     <MESSAGE value="update Order Module.&#10;Add protection from re-booking." />
     <MESSAGE value="Added notification about order processing." />
     <MESSAGE value="Added redirect on  success auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added redirect on  success auth" />
+    <MESSAGE value="Added control page.&#10;Rename data in Smarty." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added control page.&#10;Rename data in Smarty." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -820,27 +866,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/templates/adminpanel/main.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/templates/site/main.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="7" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/AJAX.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-457">
@@ -997,20 +1022,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="345">
-            <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/media/JavaScript/datepicker.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8427">
           <caret line="757" column="12" lean-forward="false" selection-start-line="757" selection-start-column="12" selection-end-line="757" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1087,18 +1103,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/requests/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1815">
-          <caret line="121" column="12" lean-forward="false" selection-start-line="121" selection-start-column="12" selection-end-line="121" selection-end-column="49" />
-          <folding>
-            <marker date="1491717830000" expanded="true" signature="1856:1870" ph="SELECT * FRO... ${$_POST['getTable']}" />
-            <marker date="1491717830000" expanded="true" signature="2865:2946" ph="INSERT INTO ${$_POST['addRecord']}... " />
-            <marker date="1491717830000" expanded="true" signature="5235:5284" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/configs/smarty.site.config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
@@ -1152,22 +1156,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/templates/adminpanel/head.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="58" lean-forward="false" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/templates/adminpanel/cars.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/configs/smarty.adminpanel.config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1184,10 +1172,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/templates/adminpanel/control.tpl">
+    <entry file="file://$PROJECT_DIR$/application/templates/adminpanel/cars.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="26" />
+        <state relative-caret-position="150">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/adminpanel/cars/index.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -1200,11 +1196,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/templates/adminpanel/cars/index.tpl">
+    <entry file="file://$PROJECT_DIR$/application/templates/adminpanel/404.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+        <state relative-caret-position="120">
+          <caret line="8" column="44" lean-forward="false" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/adminpanel/control.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="22" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/adminpanel/head.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/adminpanel/main.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="30" lean-forward="false" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/requests/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="11" selection-end-column="43" />
+          <folding>
+            <marker date="1491717830000" expanded="true" signature="1856:1870" ph="SELECT * FRO... ${$_POST['getTable']}" />
+            <marker date="1491717830000" expanded="true" signature="2865:2946" ph="INSERT INTO ${$_POST['addRecord']}... " />
+            <marker date="1491717830000" expanded="true" signature="5235:5284" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/requests/statistic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="360">
+            <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
