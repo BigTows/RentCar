@@ -20,6 +20,7 @@ class Statistic {
         xhr.open("POST", "/cars/application/requests/statistic.php");
         xhr.onreadystatechange = function () {
             if (this.readyState === 4 && this.status === 200) {
+                console.log(this.responseText);
                 let responseJSON = JSON.parse(this.responseText);
                 if (responseJSON.level == 0) {
                     self.viewChart(responseJSON.data);
@@ -34,9 +35,9 @@ class Statistic {
     viewChart(jsonData) {
         var data = [];
         var labels = [];
-        for (var key in jsonData) {
-            labels [labels.length] = jsonData[key].date;
-            data [data.length] = jsonData[key].count;
+        for (let key in jsonData) {
+            labels[labels.length] = jsonData[key].date;
+            data[data.length] = jsonData[key].count;
         }
         new Chart(this.home, {
             type: 'bar',

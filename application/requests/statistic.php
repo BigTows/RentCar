@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require '../classes/user.php';
 require '../configs/database.connect.php';
 require 'response.php';
@@ -7,7 +7,7 @@ $DBConnect->setDebug(false);
 $user = new User($DBConnect, session_id());
 
 if (isset($_POST['count'])) {
-    if ($user->havePerm("stats_" . strtolower($_POST['count']))) {
+    if (!$user->havePerm("stats_" . strtolower($_POST['count']))) {
         $response = new Response("У вас нет прав на статистику: " . $_POST['count'] . "!", "", [], 2);
     } else {
         if ($_POST['count'] == "car") {
