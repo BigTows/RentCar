@@ -4,4 +4,3 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?temp=$1 [L]
 php_value post_max_size 20M
-

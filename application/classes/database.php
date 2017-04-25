@@ -17,10 +17,11 @@ class DataBase{
         }
     }
 
-    public function sendQuery($SQL,$Array=[]){
+    public function sendQuery($SQL, $Array = [], $type = PDO::PARAM_STR)
+    {
             $statement = $this->DBConnect->prepare($SQL);
             foreach ($Array as $key => $item) {
-                $statement->bindValue(":" . $key, $item);
+                $statement->bindValue(":" . $key, $item, $type);
                 $this->log("Bind :" . $key . " " . $item . "<br>");
             }
             $statement->execute();

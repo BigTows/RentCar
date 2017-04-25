@@ -17,8 +17,8 @@ class Сatalog
         $this->DBConnect = $DBConnect;
         $this->page = $page;
         $statment = $this->DBConnect->sendQuery("SELECT * FROM All_cars Limit :page,:count", [
-                "page" => ($this->page * $count),
-                "count" => $count]
+            "page" => ($this->page - 1) * $count,
+            "count" => $count], PDO::PARAM_INT
         );
         foreach ($statment->fetchAll() as $row) {
             $car = [];

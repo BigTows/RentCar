@@ -7,6 +7,7 @@ $smarty->template_dir = $rootPath . 'application/templates/site';
 require 'database.connect.php';
 require $rootPath . 'application/classes/user.php';
 require $rootPath . 'application/classes/profile.php';
+require $rootPath . 'application/classes/catalog.php';
 $user = new User($DBConnect, session_id());
 $data = [
     "title" => "Прокат автомобилей",
@@ -17,15 +18,16 @@ $data = [
 $data["nav"] += ($user->isLoggin()) ? ["Профиль" => "/cars/profile",
     "Заказать" => "/cars/buy"] : ["Авторизация" => "/cars/auth"];
 $smarty->assign("data", $data);
-
+$_GET;
 /**
  * @param $response
  * @return mixed|string
  */
 function getPage($response)
 {
-
     global $user;
+    global $_GET;
+    $_GET = $response;
     $pages = [
         "index" => "main.tpl",
         "add" => "add.tpl",
@@ -39,6 +41,7 @@ function getPage($response)
      * @TODO Add Catalog on main page
      */
     if ($user->havePerm("not_" . $response['temp'])) {
+        //assign($response['temp']);
         return $pages["index"];
     } else if (needPerm($response['temp'])) {
         if ($user->havePerm("page_" . $response['temp'])) {
@@ -48,6 +51,7 @@ function getPage($response)
             return "permissions.tpl";
         }
     } else {
+        assign($response['temp']);
         return $pages[$response['temp']] ?? "404.tpl";
     }
 
@@ -67,10 +71,15 @@ function assign($page)
     global $smarty;
     global $user;
     global $DBConnect;
+    global $_GET;
     switch ($page) {
         case "profile": {
             $smarty->assign("profile", new Profile($user, $DBConnect));
             break;
+        }
+        case "index": {
+            $page = $_GET['page'] ?? 1;
+            $smarty->assign("cars", new Сatalog($DBConnect, $page, 20));
         }
 
     }
