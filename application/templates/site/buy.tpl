@@ -21,7 +21,6 @@
                     <div class="col-md-6 col-xs-12">
                         <div id="map" style="width: auto; height: 400px"></div>
                         <script>
-
                             ymaps.ready(init);
                             var map;
                             function init() {

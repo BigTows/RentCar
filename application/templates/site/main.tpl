@@ -5,7 +5,9 @@
 {include 'nav.tpl'}
 
 {capture name=content}
-    {include file='test.tpl'}
+    {foreach from=$cars->getCars() item=foo}
+        <a>{$foo["brand"]}</a>
+    {/foreach}
 {/capture}
 
 {include 'container.tpl'}

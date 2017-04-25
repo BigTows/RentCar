@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-31 14:50:38
+/* Smarty version 3.1.30, created on 2017-04-18 20:28:43
   from "/var/www/html/cars/application/templates/adminpanel/cars/index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-    'unifunc' => 'content_58de428ea6bd48_57353491',
+    'unifunc' => 'content_58f64ccbd4b9e2_68056713',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '164011807d8cacb29f4cf8f81b492014755fc8c1' => 
     array (
       0 => '/var/www/html/cars/application/templates/adminpanel/cars/index.tpl',
-        1 => 1490961034,
+        1 => 1492536521,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
       'file:cars/cars.tpl' => 1,
   ),
 ),false)) {
-    function content_58de428ea6bd48_57353491(Smarty_Internal_Template $_smarty_tpl)
+    function content_58f64ccbd4b9e2_68056713(Smarty_Internal_Template $_smarty_tpl)
     {
 ?>
 <div id="info">
@@ -58,7 +58,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
         </div>
     </div>
     <div class="panel-footer">
-        Test
+        <?php echo $_smarty_tpl->tpl_vars['data']->value['footer']; ?>
+
     </div>
 </div><?php }
 }

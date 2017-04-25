@@ -2,6 +2,7 @@
  * Not support mobile platform
  * and Safari (omg)
  */
+
 class Order {
     constructor(elem) {
         this.home = elem;

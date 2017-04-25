@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-14 23:19:26
+/* Smarty version 3.1.30, created on 2017-04-18 21:35:34
   from "/var/www/html/cars/application/templates/adminpanel/main.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58c8504e44d396_73072297',
+    'unifunc' => 'content_58f65c765dc046_55550312',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3d161a6cd39815676bb10c8846086040e7730185' => 
     array (
       0 => '/var/www/html/cars/application/templates/adminpanel/main.tpl',
-      1 => 1489522274,
+        1 => 1492540532,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     'file:head.tpl' => 1,
     'file:nav.tpl' => 1,
+      'file:container.tpl' => 1,
   ),
 ),false)) {
-function content_58c8504e44d396_73072297 (Smarty_Internal_Template $_smarty_tpl) {
+    function content_58f65c765dc046_55550312(Smarty_Internal_Template $_smarty_tpl)
+    {
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,6 +33,49 @@ function content_58c8504e44d396_73072297 (Smarty_Internal_Template $_smarty_tpl)
 
 <body>
 <?php $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<?php $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, 'content', null, null);
+?>
+
+<div id="info">
+
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">Главная страница</div>
+
+</div>
+<div class="panel-body">
+    <div class="row">
+        <?php echo '<script'; ?>
+        src="../media/JavaScript/Chart.min.js"><?php echo '</script'; ?>
+        >
+        <?php echo '<script'; ?>
+        src="../media/JavaScript/Statistic.js"><?php echo '</script'; ?>
+        >
+        <canvas id="order" width="400" height="400"></canvas>
+        <?php echo '<script'; ?>
+        >
+        new Statistic({
+        chart: document.getElementById("order"),
+        info: document.getElementById("info")
+        }, {
+        action: "count",
+        item: "order"
+        },
+        "bar");
+        <?php echo '</script'; ?>
+        >
+    </div>
+    <div class="panel-footer">
+        <?php echo $_smarty_tpl->tpl_vars['data']->value['footer']; ?>
+
+    </div>
+</div>
+<?php $_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);
+?>
+
+<?php $_smarty_tpl->_subTemplateRender("file:container.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 

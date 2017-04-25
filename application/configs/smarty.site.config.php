@@ -24,6 +24,7 @@ $smarty->assign("data", $data);
  */
 function getPage($response)
 {
+
     global $user;
     $pages = [
         "index" => "main.tpl",
@@ -33,8 +34,10 @@ function getPage($response)
         "buy" => "buy.tpl",
         "profile" => "profile.tpl"
     ];
-
     $response['temp'] = $response['temp'] ?? "index";
+    /**
+     * @TODO Add Catalog on main page
+     */
     if ($user->havePerm("not_" . $response['temp'])) {
         return $pages["index"];
     } else if (needPerm($response['temp'])) {
@@ -67,6 +70,7 @@ function assign($page)
     switch ($page) {
         case "profile": {
             $smarty->assign("profile", new Profile($user, $DBConnect));
+            break;
         }
 
     }
