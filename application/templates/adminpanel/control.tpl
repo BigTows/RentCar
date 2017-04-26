@@ -13,7 +13,11 @@
     </div>
     <div class="panel-body">
         <div class="row">
-
+            {foreach from=$control->getCars() item=foo}
+                <tr>
+                    <td>{$foo["brand"]}</td>
+                </tr>
+            {/foreach}
         </div>
         <div class="panel-footer">
             {$data.footer}

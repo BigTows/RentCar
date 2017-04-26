@@ -2,6 +2,7 @@
 session_start();
 require 'smarty.config.php';
 require $rootPath.'application/classes/user.php';
+require $rootPath . 'application/classes/controlCars.php';
 require 'database.connect.php';
 $smarty->template_dir = $rootPath.'application/templates/adminpanel';
 $user = new User($DBConnect,session_id());
@@ -40,8 +41,23 @@ function getPage($response){
     if (!$user->havePerm("adminpanel")){
         $response['temp'] = 'auth';
     }else {
+        assign($response['temp']);
         $response['temp'] = $response['temp'] ?? 'index';
     }
     return $pages[$response['temp']] ?? "404.tpl";
+}
+
+function assign($page)
+{
+    global $smarty;
+    global $user;
+    global $DBConnect;
+    switch ($page) {
+        case "control": {
+            $smarty->assign("control", new ControlCars($DBConnect, $user));
+            break;
+        }
+
+    }
 }
 
