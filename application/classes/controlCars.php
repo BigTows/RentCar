@@ -24,6 +24,9 @@ class ControlCars
             $car += array("status" => $row['status']);
             $car += array("id_car" => $row['id_car']);
             $car += array("id_user" => $row['id_user']);
+            $car += array("first_name" => $row['first_name']);
+            $car += array("second_name" => $row['second_name']);
+            $car += array("phone" => $row['phone']);
             $car += array("date_begin" => $row['date_begin']);
             $car += array("date_end" => $row['date_end']);
             $car += array("arrears" => $row['arrears']);
