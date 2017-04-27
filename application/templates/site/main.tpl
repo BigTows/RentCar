@@ -22,6 +22,15 @@
         </div>
         <hr>
     {/foreach}
+    <ul class="pagination">
+        {for $foo=1 to $cars->getCountCars()}
+            {if $foo == $cars->getPage()}
+                <li class="active"><a href="?page={$foo}">{$foo}</a></li>
+            {else}
+                <li><a href="?page={$foo}">{$foo}</a></li>
+            {/if}
+        {/for}
+    </ul>
 {/capture}
 
 {include 'container.tpl'}

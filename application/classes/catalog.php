@@ -10,17 +10,20 @@ class Сatalog
 {
     private $DBConnect;
     private $page;
+    private $count = 0;
     private $cars = array();
+    private $countCars = 0;
 
     function __construct($DBConnect, $page, $count)
     {
         $this->DBConnect = $DBConnect;
         $this->page = $page;
-        $statment = $this->DBConnect->sendQuery("SELECT * FROM All_cars Limit :page,:count", [
+        $statement = $this->DBConnect->sendQuery("SELECT * FROM All_cars Limit :page,:count", [
             "page" => ($this->page - 1) * $count,
             "count" => $count], PDO::PARAM_INT
         );
-        foreach ($statment->fetchAll() as $row) {
+        $this->count=$count;
+        foreach ($statement->fetchAll() as $row) {
             $car = [];
             $car += array("brand" => $row['brand_name']);
             $car += array("model" => $row['model']);
@@ -29,11 +32,29 @@ class Сatalog
             $car += array("type" => $row['type_transport_name']);
             array_push($this->cars, $car);
         }
+        $statement = $this->DBConnect->sendQuery("SELECT Count(*) as count FROM All_cars ");
+        $this->countCars = $statement->fetch()['count'];
     }
 
     public function getCars(): array
     {
         return $this->cars;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCountCars():int
+    {
+        return $this->countCars/$this->count;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPage()
+    {
+        return $this->page;
     }
 
 }
