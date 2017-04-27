@@ -16,7 +16,8 @@ $data =[
         "Контроль машин" => "/cars/admin/control"
     ],
     "tables" => [
-        "Машины"=>"/cars/admin/cars"
+        "Машины"=>"/cars/admin/cars",
+        "Метоположения"=>"/cars/admin/locations"
     ],
     "footer" => "RentCar system by @BigTows"
 ];
@@ -35,6 +36,7 @@ function getPage($response){
         "view"=>"view.tpl",
         "auth"=>"login.tpl",
         "cars" => "cars.tpl",
+        "locations"=>"locations.tpl",
         "control" => "control.tpl"
     ];
     global $user;
