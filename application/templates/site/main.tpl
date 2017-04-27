@@ -20,6 +20,7 @@
                 <p>{$foo["description"]}</p>
             </div>
         </div>
+        <hr>
     {/foreach}
 {/capture}
 
