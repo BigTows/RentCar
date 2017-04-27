@@ -114,6 +114,16 @@ class User
         return $validData;
     }
 
+    public function logout(){
+        if ($this->isLoggin()){
+            $statement = $this->DBConnect->sendQuery("DELETE FROM `User_session` WHERE `id_user` = :id",[
+                "id"=>$this->id
+            ]);
+            if (!$this->DBConnect->hasError())
+            $this->isLoggin=false;
+        }
+    }
+
     public function getId()
     {
         return $this->id;

@@ -15,8 +15,11 @@ $data = [
         "Главная" => "/cars"
     ]
 ];
-$data["nav"] += ($user->isLoggin()) ? ["Профиль" => "/cars/profile",
-    "Заказать" => "/cars/buy"] : ["Авторизация" => "/cars/auth"];
+$data["nav"] += ($user->isLoggin()) ? [
+    "Профиль" => "/cars/profile",
+    "Заказать" => "/cars/buy",
+    "Выйти" => "/cars/exit"
+] : ["Авторизация" => "/cars/auth"];
 $smarty->assign("data", $data);
 $_GET;
 /**
@@ -34,7 +37,8 @@ function getPage($response)
         "test" => "test.tpl",
         "auth" => "authorization.tpl",
         "buy" => "buy.tpl",
-        "profile" => "profile.tpl"
+        "profile" => "profile.tpl",
+        "exit" => "exit.tpl"
     ];
     $response['temp'] = $response['temp'] ?? "index";
     /**
@@ -80,6 +84,11 @@ function assign($page)
         case "index": {
             $page = $_GET['page'] ?? 1;
             $smarty->assign("cars", new Сatalog($DBConnect, $page, 20));
+            break;
+        }
+        case "exit":{
+            $user->logout();
+            break;
         }
 
     }
