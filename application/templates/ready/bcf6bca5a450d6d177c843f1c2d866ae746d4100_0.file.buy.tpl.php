@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-04-21 15:00:23
+/* Smarty version 3.1.30, created on 2017-04-25 20:36:21
   from "/var/www/html/cars/application/templates/site/buy.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-    'unifunc' => 'content_58f9f457ddd4e5_93572286',
+  'unifunc' => 'content_58ff89156766b5_74621985',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bcf6bca5a450d6d177c843f1c2d866ae746d4100' => 
     array (
       0 => '/var/www/html/cars/application/templates/site/buy.tpl',
-        1 => 1492776021,
+      1 => 1493141781,
       2 => 'file',
     ),
   ),
@@ -23,8 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:container.tpl' => 1,
   ),
 ),false)) {
-    function content_58f9f457ddd4e5_93572286(Smarty_Internal_Template $_smarty_tpl)
-    {
+function content_58ff89156766b5_74621985 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,45 +38,45 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
 <?php $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, 'content', null, null);
 ?>
 
-<?php echo '<script'; ?>
-src="../cars/media/JavaScript/Order.js"><?php echo '</script'; ?>
+    <?php echo '<script'; ?>
+ src="../cars/media/JavaScript/Order.js"><?php echo '</script'; ?>
 >
-<link rel="stylesheet" href="../cars/media/style/datepicker.min.css">
-<?php echo '<script'; ?>
-src="../cars/media/JavaScript/datepicker.min.js"><?php echo '</script'; ?>
+    <link rel="stylesheet" href="../cars/media/style/datepicker.min.css">
+    <?php echo '<script'; ?>
+ src="../cars/media/JavaScript/datepicker.min.js"><?php echo '</script'; ?>
 >
-<div class="panel panel-default">
-    <div class="panel-heading">
-        Заказать
-    </div>
-    <div class="panel-body">
-        <div class="row">
-            <div class="form-group">
-                <div class="col-md-6 col-xs-12" id="orderPanel">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Заказать
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-md-6 col-xs-12" id="orderPanel">
 
                     </div>
-                <div class="col-md-6 col-xs-12">
-                    <div id="map" style="width: auto; height: 400px"></div>
-                    <?php echo '<script'; ?>
-                    >
-                    ymaps.ready(init);
-                    var map;
-                    function init() {
-                    map = new ymaps.Map("map", {
-                    center: [55.76, 37.64],
-                    zoom: 10
-                    });
-                    }
-                    new Order(document.getElementById("orderPanel"));
-                    <?php echo '</script'; ?>
-                    >
+                    <div class="col-md-6 col-xs-12">
+                        <div id="map" style="width: auto; height: 400px"></div>
+                        <?php echo '<script'; ?>
+>
+                            ymaps.ready(init);
+                            var map;
+                            function init() {
+                                map = new ymaps.Map("map", {
+                                    center: [55.76, 37.64],
+                                    zoom: 10
+                                });
+                            }
+                            new Order(document.getElementById("orderPanel"));
+                        <?php echo '</script'; ?>
+>
+                    </div>
                 </div>
+
             </div>
 
         </div>
-
     </div>
-</div>
 <?php $_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);
 ?>
 

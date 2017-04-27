@@ -41,8 +41,8 @@ function getPage($response){
     if (!$user->havePerm("adminpanel")){
         $response['temp'] = 'auth';
     }else {
-        assign($response['temp']);
         $response['temp'] = $response['temp'] ?? 'index';
+        assign($response['temp']);
     }
     return $pages[$response['temp']] ?? "404.tpl";
 }

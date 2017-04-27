@@ -10,7 +10,6 @@
     <div class="panel panel-default">
         <div class="panel-heading">Работа с машинами</div>
 
-    </div>
     <div class="panel-body">
         <div class="row">
             <table class="table table-hover">
@@ -62,6 +61,7 @@
         <div class="panel-footer">
             {$data.footer}
         </div>
+    </div>
     </div>
 {/capture}
 {include 'container.tpl'}

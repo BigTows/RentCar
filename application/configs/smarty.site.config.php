@@ -41,7 +41,7 @@ function getPage($response)
      * @TODO Add Catalog on main page
      */
     if ($user->havePerm("not_" . $response['temp'])) {
-        //assign($response['temp']);
+        assign("index");
         return $pages["index"];
     } else if (needPerm($response['temp'])) {
         if ($user->havePerm("page_" . $response['temp'])) {

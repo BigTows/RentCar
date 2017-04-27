@@ -10,7 +10,6 @@
     <div class="panel panel-default">
         <div class="panel-heading">Главная страница</div>
 
-    </div>
     <div class="panel-body">
         <div class="row">
             <script src="../media/JavaScript/Chart.min.js"></script>
@@ -30,6 +29,7 @@
         <div class="panel-footer">
             {$data.footer}
         </div>
+    </div>
     </div>
 {/capture}
 {include 'container.tpl'}
