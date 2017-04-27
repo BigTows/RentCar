@@ -19,6 +19,9 @@ $data =[
         "Машины"=>"/cars/admin/cars",
         "Метоположения"=>"/cars/admin/locations"
     ],
+    "view_tables" => [
+        "Все машины"=>"/cars/admin/allcars"
+    ],
     "footer" => "RentCar system by @BigTows"
 ];
 
@@ -37,7 +40,8 @@ function getPage($response){
         "auth"=>"login.tpl",
         "cars" => "cars.tpl",
         "locations"=>"locations.tpl",
-        "control" => "control.tpl"
+        "control" => "control.tpl",
+        "allcars"=>"view/allcars.tpl"
     ];
     global $user;
     if (!$user->havePerm("adminpanel")){

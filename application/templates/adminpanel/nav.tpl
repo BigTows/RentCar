@@ -23,6 +23,17 @@
                     </ul>
                 </li>
 
+                <li class="dropdown">
+                    <a class="dropdown-toggle" type="button" id="tables" data-toggle="dropdown">Представления
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="tables">
+                        {foreach from=$data.view_tables item=link key=name}
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="{$link}">{$name}</a></li>
+                        {/foreach}
+                    </ul>
+                </li>
+
+
             </ul>
         </div>
     </div>
