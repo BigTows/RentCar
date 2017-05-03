@@ -22,7 +22,7 @@ $data =[
     "view_tables" => [
         "Все машины"=>"/cars/admin/allcars"
     ],
-    "footer" => "RentCar system by @BigTows"
+    "footer" => "RentCar system by <a href='https://github.com/BigTows/'>@BigTows</a>"
 ];
 
 $smarty->assign("data",$data);

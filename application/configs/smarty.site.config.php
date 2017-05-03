@@ -83,7 +83,7 @@ function assign($page)
         }
         case "index": {
             $page = $_GET['page'] ?? 1;
-            $smarty->assign("cars", new Сatalog($DBConnect, $page, 20));
+            $smarty->assign("cars", new Сatalog($DBConnect, $page, 2));
             break;
         }
         case "exit":{
