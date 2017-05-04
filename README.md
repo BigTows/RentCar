@@ -17,10 +17,10 @@
 - Просмотр статистики в Админ панели
 - Просмотр всех машин
 ## Интсрументы
-- Bootstrap 3
-- Smarty
-- MariaDB
-- Apache 2
+- [Bootstrap 3](getbootstrap.com/)
+- [Smarty](http://www.smarty.net/)
+- [MariaDB](https://mariadb.org/)
+- [Apache 2](https://httpd.apache.org/)
 - [Yandex Map](https://tech.yandex.ru/maps/)
 - [AIR DATEPICKER](http://t1m0n.name/air-datepicker/docs/index-ru.html)
 - [Chart.js](http://www.chartjs.org/)
