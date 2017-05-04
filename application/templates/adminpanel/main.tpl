@@ -26,10 +26,10 @@
                     "bar");
             </script>
         </div>
+    </div>
         <div class="panel-footer">
             {$data.footer}
         </div>
-    </div>
     </div>
 {/capture}
 {include 'container.tpl'}

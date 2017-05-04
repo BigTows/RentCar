@@ -107,15 +107,17 @@
                                     <button type="button" class="btn btn-success btn-xs">Нет</button>
                                 {/if}
                             </td>
-                            <td>@TODO</td>
+                            <td>
+
+                            </td>
                         </tr>
                     {/foreach}
                     </tbody>
                 </table>
             </div>
-            <div class="panel-footer">
-                {$data.footer}
-            </div>
+        </div>
+        <div class="panel-footer">
+            {$data.footer}
         </div>
     </div>
 {/capture}
