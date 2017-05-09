@@ -112,6 +112,7 @@ class Table {
                 console.log(this.responseText);
                 var responseJSON = JSON.parse(this.responseText);
                 printResponse(responseJSON, self.responsePanel);
+                if (responseJSON.level==0)
                 self.getTable();
             }
         }
@@ -168,6 +169,7 @@ class Table {
             if (this.status == 200 && this.readyState == 4) {
                 var responseJSON = JSON.parse(this.responseText);
                 printResponse(responseJSON, self.responsePanel);
+                if (responseJSON.level==0)
                 self.getTable();
             }
         }

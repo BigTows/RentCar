@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-04-27 10:30:45
+/* Smarty version 3.1.30, created on 2017-05-04 11:15:39
   from "/var/www/html/cars/application/templates/adminpanel/main.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-    'unifunc' => 'content_59019e25258544_86157100',
+  'unifunc' => 'content_590ae32b7ce2f8_28002858',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3d161a6cd39815676bb10c8846086040e7730185' => 
     array (
       0 => '/var/www/html/cars/application/templates/adminpanel/main.tpl',
-        1 => 1493278239,
+      1 => 1493885737,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     'file:head.tpl' => 1,
     'file:nav.tpl' => 1,
-      'file:container.tpl' => 1,
+    'file:container.tpl' => 1,
   ),
 ),false)) {
-    function content_59019e25258544_86157100(Smarty_Internal_Template $_smarty_tpl)
-    {
+function content_590ae32b7ce2f8_28002858 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -38,40 +37,40 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
 <?php $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, 'content', null, null);
 ?>
 
-<div id="info">
+    <div id="info">
 
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading">Главная страница</div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">Главная страница</div>
 
     <div class="panel-body">
         <div class="row">
             <?php echo '<script'; ?>
-            src="../media/JavaScript/Chart.min.js"><?php echo '</script'; ?>
-            >
+ src="../media/JavaScript/Chart.min.js"><?php echo '</script'; ?>
+>
             <?php echo '<script'; ?>
-            src="../media/JavaScript/Statistic.js"><?php echo '</script'; ?>
-            >
+ src="../media/JavaScript/Statistic.js"><?php echo '</script'; ?>
+>
             <canvas id="order" width="400" height="400"></canvas>
             <?php echo '<script'; ?>
-            >
-            new Statistic({
-            chart: document.getElementById("order"),
-            info: document.getElementById("info")
-            }, {
-            action: "count",
-            item: "order"
-            },
-            "bar");
+>
+                new Statistic({
+                        chart: document.getElementById("order"),
+                        info: document.getElementById("info")
+                    }, {
+                        action: "count",
+                        item: "order"
+                    },
+                    "bar");
             <?php echo '</script'; ?>
-            >
+>
         </div>
+    </div>
         <div class="panel-footer">
-            <?php echo $_smarty_tpl->tpl_vars['data']->value['footer']; ?>
+            <?php echo $_smarty_tpl->tpl_vars['data']->value['footer'];?>
 
         </div>
     </div>
-</div>
 <?php $_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);
 ?>
 

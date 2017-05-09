@@ -51,5 +51,6 @@ function printResponse(json, element) {
             console.log("Level: " + json.level + " not found");
     }
     element.setAttribute("class", styleClass);
-    element.innerHTML = "<strong>" + json.messages.short + "</strong> <br>" + json.messages.full;
+    var date = "["+new Date().getHours()+":"+new Date().getMinutes()+":"+new Date().getSeconds()+"] ";
+    element.innerHTML = "<strong>"+date + json.messages.short + "</strong> <br>" + json.messages.full;
 }

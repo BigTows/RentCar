@@ -11,7 +11,7 @@ $DBConnect->setDebug(false);
 $user = new User($DBConnect, session_id());
 if (isset($_POST['changeStatus']){
     if ($user->havePerm("change_status_car")) {
-            $statement = $DBConnect->sendQuery("UPDATE Rolling_Cars")
+            $statement = $DBConnect->sendQuery("UPDATE Rolling_Cars");
     }else{
         $response = new Response("Нет доступа!", "", [], 2);
     }

@@ -17,7 +17,8 @@ $data =[
     ],
     "tables" => [
         "Машины"=>"/cars/admin/cars",
-        "Метоположения"=>"/cars/admin/locations"
+        "Метоположения"=>"/cars/admin/locations",
+        "Пользователи" => "/cars/admin/users"
     ],
     "view_tables" => [
         "Все машины"=>"/cars/admin/allcars"
@@ -40,6 +41,7 @@ function getPage($response){
         "auth"=>"login.tpl",
         "cars" => "cars.tpl",
         "locations"=>"locations.tpl",
+        "users"=>"users.tpl",
         "control" => "control.tpl",
         "allcars"=>"view/allcars.tpl"
     ];
