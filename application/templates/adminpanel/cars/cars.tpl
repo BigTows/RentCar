@@ -5,5 +5,5 @@
 </table>
 
 <script>
-    var t = new Table("Cars", document.getElementById("CarsTable"));
+    var t = new CarsTable(document.getElementById("CarsTable"));
 </script>

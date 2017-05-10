@@ -28,7 +28,7 @@
                     </thead>
                     <tbody>
                     {foreach from=$control->getCars() item=foo}
-                        <tr>
+                        <tr id="car-id-{$foo["id_car"]}">
                             <td>{$foo["brand"]} - {$foo["model"]}</td>
                             <!-- Modal sign !-->
                             <td><a data-toggle="modal" data-target="#{$foo["sign"]}Modal">{$foo["sign"]}</a></td>
@@ -108,12 +108,33 @@
                                 {/if}
                             </td>
                             <td>
-
+                                <button onclick="changeStatus({$foo["id_car"]},1)" class="btn btn-primary btn-xs">Освободить</button>
                             </td>
                         </tr>
                     {/foreach}
                     </tbody>
                 </table>
+                <script>
+                    function changeStatus(idCar,status){
+                        var xhr = new XMLHttpRequest();
+                        var data = new FormData();
+                        data.append("changeStatus",idCar);
+                        data.append("status",status);
+                        xhr.open("POST","/cars/application/requests/control.php");
+                        xhr.onreadystatechange=function(){
+
+                            if (this.status == 200 && this.readyState == 4) {
+                                var responseJSON = JSON.parse(this.responseText);
+                                printResponse(responseJSON, document.getElementById("info"));
+                                if (responseJSON.level == 0) {
+                                  location.reload();
+                                }
+                            }
+                        };
+                        xhr.send(data);
+
+                    }
+                </script>
             </div>
         </div>
         <div class="panel-footer">

@@ -9,9 +9,17 @@ require '../configs/database.connect.php';
 require 'response.php';
 $DBConnect->setDebug(false);
 $user = new User($DBConnect, session_id());
-if (isset($_POST['changeStatus']){
+if (isset($_POST['changeStatus'])){
     if ($user->havePerm("change_status_car")) {
-            $statement = $DBConnect->sendQuery("UPDATE Rolling_Cars");
+            $statement = $DBConnect->sendQuery("UPDATE Rolling_Cars SET id_status=:status WHERE id_rolling_car=:id_car",[
+                "status"=>$_POST['status'],
+                "id_car"=>$_POST['changeStatus']
+            ]);
+            if ($DBConnect->hasError()){
+                $response = new Response("Произошла ошибка!", "", [], 0);
+            }else{
+                $response = new Response("Статус машины изменен!", "", [], 0);
+            }
     }else{
         $response = new Response("Нет доступа!", "", [], 2);
     }
