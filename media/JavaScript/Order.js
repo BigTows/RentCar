@@ -102,7 +102,7 @@ class Order {
 
             if (element["id_brand"] === self.brand && element["model"] === self.car) {
                 var divColor = document.createElement("div");
-                divColor.style.backgroundColor = "#" + element["hex_color"];
+                divColor.style.backgroundColor = element["hex_color"];
                 divColor.className = "color-pick";
                 divColor.onclick = function () {
                     self.datePicker.remove();

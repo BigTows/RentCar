@@ -73,7 +73,7 @@
                 responsePanel: document.getElementById("infoAuth"),
                 data: ["user", "password"]
             }, function () {
-                location.reload();
+                location.href = "/cars/";
             });
         });
 
