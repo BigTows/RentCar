@@ -23,7 +23,29 @@ if (isset($_POST['changeStatus'])){
     }else{
         $response = new Response("Нет доступа!", "", [], 2);
     }
-}else{
+} else if (isset($_POST['cancelOrder'])) {
+    if ($user->havePerm("cancel_order")) {
+
+        $statement = $DBConnect->sendQuery("DELETE FROM Orders WHERE id_order=:id", [
+            "id" => $_POST['cancelOrder']
+        ]);
+        if ($DBConnect->hasError()) {
+            $response = new Response("Произошла ошибка!", "", [], 0);
+        } else {
+            $statement = $DBConnect->sendQuery("UPDATE Rolling_Cars SET id_status=:status WHERE id_rolling_car=:id_car", [
+                "status" => 1,
+                "id_car" => $_POST['id_car']
+            ]);
+            if ($DBConnect->hasError()) {
+                $response = new Response("Произошла ошибка!", "", [], 0);
+            } else {
+                $response = new Response("Заказ отменен!", "", [], 0);
+            }
+        }
+    } else {
+        $response = new Response("Нет доступа!", "", [], 2);
+    }
+} else {
     $response = new Response("Метод не найден", "Проверьте введенные данные.", [], 1);
 }
 $response->execute();

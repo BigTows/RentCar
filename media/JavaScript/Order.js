@@ -150,6 +150,7 @@ class Order {
                                                     panelInfo.className = ""
                                                     var responseJSON = JSON.parse(this.responseText);
                                                     printResponse(responseJSON, panelInfo);
+                                                    console.log(this.responseText);
                                                     self.price.appendChild(panelInfo);
                                                 }
                                             };

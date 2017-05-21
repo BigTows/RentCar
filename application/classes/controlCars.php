@@ -31,6 +31,7 @@ class ControlCars
             $car += array("date_end" => $row['date_end']);
             $car += array("arrears" => $row['arrears']);
             $car += array("sign" => $row['sign']);
+            $car += array("id_order" => $row['id_order']);
             $statmentLocation = $this->DBConnect->sendQuery("SELECT * FROM History_locations INNER JOIN Locations on Locations.id_location = History_locations.id_location  WHERE id_rolling_car = " . $row['id_car'] . " ORDER by date DESC LIMIT 1");
             foreach ($statmentLocation->fetchAll() as $rowLocation) {
                 $car += array("longitude" => $rowLocation['longitude']);

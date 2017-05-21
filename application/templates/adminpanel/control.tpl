@@ -30,9 +30,12 @@
                     {foreach from=$control->getCars() item=foo}
                         <tr id="car-id-{$foo["id_car"]}">
                             <td>{$foo["brand"]} - {$foo["model"]}</td>
+                            <td><a data-toggle="modal"
+                                   data-target="#{$foo["sign"]}{$foo["date_begin"]}{$foo["date_end"]}Modal">{$foo["sign"]}</a>
+                            </td>
                             <!-- Modal sign !-->
-                            <td><a data-toggle="modal" data-target="#{$foo["sign"]}Modal">{$foo["sign"]}</a></td>
-                            <div class="modal fade" id="{$foo["sign"]}Modal" role="dialog">
+                            <div class="modal fade" id="{$foo["sign"]}{$foo["date_begin"]}{$foo["date_end"]}Modal"
+                                 role="dialog">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -108,7 +111,17 @@
                                 {/if}
                             </td>
                             <td>
-                                <button onclick="changeStatus({$foo["id_car"]},1)" class="btn btn-primary btn-xs">Освободить</button>
+                                {if $foo["id_status"]==2}
+                                    <button onclick="cancelOrder({$foo["id_order"]},{$foo["id_car"]})"
+                                            class="btn btn-danger btn-xs">Отмена заказа
+                                    </button>
+                                {else}
+                                    <button onclick="changeStatus({$foo["id_car"]},1)" class="btn btn-primary btn-xs">
+                                        Освободить
+                                    </button>
+                                {/if}
+
+
                             </td>
                         </tr>
                     {/foreach}
@@ -132,8 +145,25 @@
                             }
                         };
                         xhr.send(data);
-
                     }
+                    function cancelOrder(idOrder, idCar) {
+                        var xhr = new XMLHttpRequest();
+                        var data = new FormData();
+                        data.append("cancelOrder", idOrder);
+                        data.append("id_car", idCar);
+                        xhr.open("POST", "/cars/application/requests/control.php");
+                        xhr.onreadystatechange = function () {
+                            if (this.status === 200 && this.readyState === 4) {
+                                var responseJSON = JSON.parse(this.responseText);
+                                printResponse(responseJSON, document.getElementById("info"));
+                                if (responseJSON.level == 0) {
+                                    location.reload();
+                                }
+                            }
+                        };
+                        xhr.send(data);
+                    }
+
                 </script>
             </div>
         </div>

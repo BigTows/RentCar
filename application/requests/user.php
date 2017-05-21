@@ -51,7 +51,7 @@ if (isset($_POST['getProfile'])) {
         if ($DBConnect->hasError()) {
             $response = new Response("Данная машина занята.", "Видимо эту машину уже кто-то выбрал, обновите страницу и попробуйте заново!", [], 2);
         } else {
-            $response = new Response("Заказ обработан!", "", [], 0);
+            $response = new Response("Заказ обработан!", "", [$valuesArray, $values], 0);
         }
     } else {
         $response = new Response("У вас нет прав для создания заказа!", "", [], 2);
