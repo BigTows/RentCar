@@ -24,7 +24,6 @@ class ValidData
 
     protected function changeValid($typeData, $bool)
     {
-        // if bad input data and Now data set is valid
         if ($this->valid && !$bool) {
             global $messages;
             array_push($this->reason, $messages["BAD_" . strtoupper($typeData)]);
@@ -42,20 +41,46 @@ class ValidData
 class RegistrationData extends ValidData
 {
 
-
     function __construct($DBConnect, $arrayData)
     {
         parent::__construct($DBConnect);
         $this->changeValid("email", $this->checkUnique("email", $arrayData["email"]));
+        $this->changeValid("email", $this->checkEmail( $arrayData["email"]));
         $this->changeValid("phone", $this->checkUnique("phone", $arrayData["phone"]));
+        $this->changeValid("phone", $this->checkLength( $arrayData["phone"],11,11));
         $this->changeValid("login", $this->checkUnique("login", $arrayData["login"]));
         $this->changeValid("passport", $this->checkUnique("passport", $arrayData["passport"]));
+        $this->changeValid("passport", $this->checkLength($arrayData["passport"],10,10));
 
     }
 
     private function checkUnique($nameRow, $data)
     {
+        if(!$this->getValid()) return false;
         return !$this->DBConnect->sendQuery("SELECT " . $nameRow . " FROM Users WHERE " . $nameRow . "=:" . $nameRow, [$nameRow => $data])->rowCount();
+
+    }
+
+    private function checkLength($data,$min=-1,$max=-1){
+        if(!$this->getValid()) return false;
+        $pattern = '/^[0-9]';
+        if ($min!=-1) $pattern=$pattern.'{'.$min;
+        if ($max!=-1) $pattern=$pattern.','.$max.'}'; else $pattern=$pattern.'}';
+        $pattern=$pattern."+$/";
+        return preg_match($pattern, $data);
+    }
+
+    private function checkPassport($passport) {
+        if(!$this->getValid()) return false;
+        return preg_match('/^[0-9]{10}+$/', $passport);
+    }
+    private function checkEmail($email){
+        if(!$this->getValid()) return false;
+        return preg_match('/^([a-z0-9_\.-]+)@([a-z0-9_\.-]+)\.([a-z\.]{2,6})$/', $email);
+    }
+    private function checkPhone($phone){
+        if(!$this->getValid()) return false;
+
     }
 
 }

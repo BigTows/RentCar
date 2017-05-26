@@ -112,6 +112,9 @@
                             </td>
                             <td>
                                 {if $foo["id_status"]==2}
+                                    <button onclick="changeStatus({$foo["id_car"]},3)" class="btn btn-primary btn-xs">
+                                        Отдать арендатору
+                                    </button>
                                     <button onclick="cancelOrder({$foo["id_order"]},{$foo["id_car"]})"
                                             class="btn btn-danger btn-xs">Отмена заказа
                                     </button>
@@ -140,7 +143,7 @@
                                 var responseJSON = JSON.parse(this.responseText);
                                 printResponse(responseJSON, document.getElementById("info"));
                                 if (responseJSON.level == 0) {
-                                  location.reload();
+                                    location.reload();
                                 }
                             }
                         };
