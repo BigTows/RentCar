@@ -51,6 +51,12 @@ class Profile
             $order += array("date_end" => $row["date_end"]);
             $order += array("model" => $row["model"]);
             $order += array("brand" => $row["brand"]);
+            $statmentLocation = $this->DBConnect->sendQuery("SELECT * FROM Locations INNER JOIN History_locations on History_locations.id_location = Locations.id_location WHERE History_locations.id_rolling_car=:idCar ORDER BY History_locations.date DESC LIMIT 1",
+                ["idCar"=>$row['id_rolling_car']]);
+            $statmentLocation->execute();
+            $rowLcoation = $statmentLocation->fetch();
+            $order += array("latitude" => $rowLcoation["latitude"]);
+            $order += array("longitude" => $rowLcoation["longitude"]);
             array_push($this->orders, $order);
         }
     }

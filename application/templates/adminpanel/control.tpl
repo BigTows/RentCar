@@ -131,13 +131,13 @@
                     </tbody>
                 </table>
                 <script>
-                    function changeStatus(idCar,status){
+                    function changeStatus(idCar, status) {
                         var xhr = new XMLHttpRequest();
                         var data = new FormData();
-                        data.append("changeStatus",idCar);
-                        data.append("status",status);
-                        xhr.open("POST","/cars/application/requests/control.php");
-                        xhr.onreadystatechange=function(){
+                        data.append("changeStatus", idCar);
+                        data.append("status", status);
+                        xhr.open("POST", "/cars/application/requests/control.php");
+                        xhr.onreadystatechange = function () {
 
                             if (this.status == 200 && this.readyState == 4) {
                                 var responseJSON = JSON.parse(this.responseText);
