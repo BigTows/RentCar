@@ -44,13 +44,19 @@ class RegistrationData extends ValidData
     function __construct($DBConnect, $arrayData)
     {
         parent::__construct($DBConnect);
-        $this->changeValid("email", $this->checkUnique("email", $arrayData["email"]));
         $this->changeValid("email", $this->checkEmail( $arrayData["email"]));
-        $this->changeValid("phone", $this->checkUnique("phone", $arrayData["phone"]));
         $this->changeValid("phone", $this->checkLength( $arrayData["phone"],11,11));
+        $this->changeValid("login", $this->checkUserName($arrayData["login"]));
+        $this->changeValid("passport", $this->checkLength($arrayData["passport"],10,10));
+        $this->changeValid("firstName", $this->checkPersonalName($arrayData["firstName"]));
+        $this->changeValid("secondName", $this->checkPersonalName($arrayData["secondName"]));
+        $this->changeValid("password", $this->checkLength($arrayData["password"],6));
+
+
+        $this->changeValid("email", $this->checkUnique("email", $arrayData["email"]));
+        $this->changeValid("phone", $this->checkUnique("phone", $arrayData["phone"]));
         $this->changeValid("login", $this->checkUnique("login", $arrayData["login"]));
         $this->changeValid("passport", $this->checkUnique("passport", $arrayData["passport"]));
-        $this->changeValid("passport", $this->checkLength($arrayData["passport"],10,10));
 
     }
 
@@ -78,9 +84,14 @@ class RegistrationData extends ValidData
         if(!$this->getValid()) return false;
         return preg_match('/^([a-z0-9_\.-]+)@([a-z0-9_\.-]+)\.([a-z\.]{2,6})$/', $email);
     }
-    private function checkPhone($phone){
-        if(!$this->getValid()) return false;
 
+    private function checkUserName($userName){
+        if(!$this->getValid()) return false;
+        return preg_match("/^[a-z0-9_-]{3,16}$/",strtolower($userName));
+    }
+    private function checkPersonalName($name){
+        if(!$this->getValid()) return false;
+        return preg_match('/^[a-zA-Zа-яёА-ЯЁ\s\-]{2,999}+$/u', $name);
     }
 
 }

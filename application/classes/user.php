@@ -1,14 +1,40 @@
 <?php
 
+/**
+ * Class User
+ */
 class User
 {
+    /**
+     * @var
+     */
     private $name;
+    /**
+     * @var
+     */
     private $id;
+    /**
+     * @var
+     */
     private $hashPassword;
+    /**
+     * @var
+     */
     private $isLoggin;
+    /**
+     * @var
+     */
     private $DBConnect;
+    /**
+     * @var array
+     */
     private $permissions = [];
 
+    /**
+     * User constructor.
+     * @param $DBConnect
+     * @param $session
+     */
     function __construct($DBConnect, $session)
     {
         $this->DBConnect = $DBConnect;
@@ -52,6 +78,9 @@ class User
         return true;
     }
 
+    /**
+     * @return bool
+     */
     private function exist()
     {
         $statement = $this->DBConnect->sendQuery("
@@ -69,6 +98,9 @@ class User
         return false;
     }
 
+    /**
+     *
+     */
     private function getRoles()
     {
         $statement = $this->DBConnect->sendQuery("
@@ -78,24 +110,35 @@ class User
         $this->permissions = $statement->fetchAll(PDO::FETCH_COLUMN, 0);
     }
 
+    /**
+     * @param $perm
+     * @return bool
+     */
     public function havePerm($perm)
     {
         return in_array($perm, $this->permissions) && $this->isLoggin;
     }
 
     /**
-     * @param $name
+     * @param $login
      * @param $password
      * @param $email
      * @param $passport
      * @param $phone
+     * @param $firstName
+     * @param $secondName
+     * @return RegistrationData
+     * @internal param $name
      */
     public function registration($login, $password, $email, $passport, $phone, $firstName, $secondName)
     {
         $validData = new RegistrationData($this->DBConnect, [
+            "firstName"=>$firstName,
+            "secondName"=>$secondName,
             "login" => $login,
             "phone" => $phone,
             "passport" => $passport,
+            "password" =>$password,
             "email" => $email]);
         if ($validData->getValid()) {
             $this->DBConnect->sendQuery("
@@ -114,6 +157,9 @@ class User
         return $validData;
     }
 
+    /**
+     *
+     */
     public function logout(){
         if ($this->isLoggin()){
             $statement = $this->DBConnect->sendQuery("DELETE FROM `User_session` WHERE `id_user` = :id",[
@@ -124,11 +170,17 @@ class User
         }
     }
 
+    /**
+     * @return mixed
+     */
     public function getId()
     {
         return $this->id;
     }
 
+    /**
+     * @return mixed
+     */
     public function isLoggin()
     {
         return $this->isLoggin;
