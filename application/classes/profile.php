@@ -39,6 +39,10 @@ class Profile
         $this->email = $row['email'];
     }
 
+    /**
+     * @TODO fix SQL view freeCars
+     */
+
     public function setOrdersData()
     {
         $statment = $this->DBConnect->sendQuery("SELECT * FROM Relevant_orders WHERE id_user=:id", [
