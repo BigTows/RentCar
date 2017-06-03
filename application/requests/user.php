@@ -24,7 +24,7 @@ if (isset($_POST['getProfile'])) {
     }
 } else if (isset($_POST['getFreeCars'])) {
     if ($user->havePerm("view_free_cars")) {
-        $QuerySQL = "SELECT * FROM freeCars";
+        $QuerySQL = "SELECT Rolling_Cars.id_rolling_car, Cars.cost_per_day, Brands.name as name_brand, Cars.model, Colors.name as name_color, Colors.hex as hex_color, Brands.id_brand, Colors.id_color, Locations.longitude, Locations.latitude, Locations.address FROM (SELECT DISTINCT id_rolling_car as id_car, (SELECT HL.id_location FROM History_locations as HL WHERE HL.id_rolling_car = id_car ORDER bY HL.date DESC LIMIT 1) as id_location FROM History_locations) as relevant_location INNER JOIN Rolling_Cars on Rolling_Cars.id_rolling_car = relevant_location.id_car INNER JOIN Colors on Colors.id_color = Rolling_Cars.id_color INNER JOIN Cars on Cars.id_car = Rolling_Cars.id_car INNER JOIN Brands on Brands.id_brand = Cars.id_brand INNER JOIN Locations on Locations.id_location = relevant_location.id_location WHERE Rolling_Cars.id_status=1";
         $statement = $DBConnect->sendQuery($QuerySQL);
         if ($DBConnect->hasError()) {
             $response = new Response("Произошла ошибка", $statement->errorInfo(), [], 2);

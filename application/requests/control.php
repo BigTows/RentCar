@@ -18,7 +18,7 @@ if (isset($_POST['changeStatus'])) {
         if ($DBConnect->hasError()) {
             $response = new Response("Произошла ошибка!", "", [], 0);
         } else {
-            if ($_POST['status']!==3) {
+            if ($_POST['status']!=3) {
                 $statement = $DBConnect->sendQuery("UPDATE Orders SET completed=1 WHERE id_rolling_car=:id_car AND completed = 0", [
                     "id_car" => $_POST['changeStatus']
                 ]);
