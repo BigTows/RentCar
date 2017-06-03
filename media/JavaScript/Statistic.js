@@ -54,7 +54,7 @@ class Statistic {
                 scales: {
                     yAxes: [{
                         ticks: {
-                            stepSize: 1,
+                            stepSize: 0.5,
                             beginAtZero: false
                         }
                     }]
