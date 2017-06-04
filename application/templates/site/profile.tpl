@@ -40,7 +40,9 @@
                             <tr>
                                 <th>Номер заказа</th>
                                 <th>Брэнд</th>
+
                                 <th>Модель</th>
+                                <th>Местоположение</th>
                                 <th>Начальная дата</th>
                                 <th>Дата конца</th>
                             </tr>
@@ -49,8 +51,11 @@
 
                             {foreach from=$profile->getOrders() item=foo}
                                 <tr>
+                                    <td>{$foo["id_order"]}</td>
+                                    <td>{$foo["brand"]}</td>
+                                    <td>{$foo["model"]}</td>
                                     <td>
-                                        <a data-toggle="modal" data-target="#{$foo["id_order"]}Modal"> {$foo["id_order"]}</a>
+                                        <a data-toggle="modal" data-target="#{$foo["id_order"]}Modal"> Местоположение</a>
                                     </td>
                                     <!-- Modal Order !-->
                                     <div class="modal fade" id="{$foo["id_order"]}Modal" role="dialog">
@@ -92,8 +97,7 @@
                                         </div>
                                     </div>
                                     <!-- End Modal Order !-->
-                                    <td>{$foo["brand"]}</td>
-                                    <td>{$foo["model"]}</td>
+
                                     <td>{$foo["date_begin"]}</td>
                                     <td>{$foo["date_end"]}</td>
                                 </tr>

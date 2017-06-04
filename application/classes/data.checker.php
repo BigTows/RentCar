@@ -50,7 +50,7 @@ class RegistrationData extends ValidData
         $this->changeValid("passport", $this->checkLength($arrayData["passport"],10,10));
         $this->changeValid("firstName", $this->checkPersonalName($arrayData["firstName"]));
         $this->changeValid("secondName", $this->checkPersonalName($arrayData["secondName"]));
-        $this->changeValid("password", $this->checkLength($arrayData["password"],6));
+        $this->changeValid("password", $this->checkPassword($arrayData["password"],6));
 
 
         $this->changeValid("email", $this->checkUnique("email", $arrayData["email"]));
@@ -92,6 +92,11 @@ class RegistrationData extends ValidData
     private function checkPersonalName($name){
         if(!$this->getValid()) return false;
         return preg_match('/^[a-zA-Zа-яёА-ЯЁ\s\-]{2,999}+$/u', $name);
+    }
+
+    private function checkPassword($name){
+        if (!$this->getValid()) return false;
+        return preg_match("/^[a-zA-Z0-9_-]{6,200}$/", $name);
     }
 
 }
