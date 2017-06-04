@@ -56,10 +56,48 @@ if (isset($_POST['getProfile'])) {
     } else {
         $response = new Response("У вас нет прав для создания заказа!", "", [], 2);
     }
+} else if (isset($_GET['printOrder'])) {
+    $response = null;
+    $statement = $DBConnect->sendQuery("SELECT *,Count(*) as count FROM Relevant_orders WHERE id_order = :idO AND id_user=:id",
+        ["idO" => $_GET['printOrder'],
+            "id" => $user->getId()]);
+    $row = $statement->fetch();
+    if ($row['count'] > 0) {
+        echo "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\">";
+        ?>
+        <div class="row">
+            <div class="col-xs-0 col-sm-4 col-md-4"></div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <ul class="list-group">
+                    <li class="list-group-item active">
+                        <span class="badge"><?php echo $row['id_order'] ?></span>
+                        Номер заказа
+                    </li>
+                </ul>
+                <div class="bs-callout bs-callout-info" id="callout-type-b-i-elems">
+                    <h4>Информация о заказе</h4>
+                    <p>
+                       Автомобиль <span><?php echo $row['brand'] . " " . $row['model'] ?></span>
+                    <hr>
+                    <span>Даты аренты автомобиля (Начало - Конец)<br> <?php echo $row['date_begin'] . " - " . $row['date_end'] ?></span>
+                    <hr>
+                    <span>Стоимость: <?php echo $row['coast'] ?></span>
+                    <hr>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <?php
+    } else {
+        echo "404";
+    }
 } else {
     $response = new Response("Method not found", "", [], 1);
 }
-$response->execute();
+if ($response != null)
+    $response->execute();
 
 /**
  *

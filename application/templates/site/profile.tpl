@@ -46,6 +46,7 @@
                                 <th>Местоположение</th>
                                 <th>Начальная дата</th>
                                 <th>Дата конца</th>
+                                <th>Чек</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -104,6 +105,7 @@
 
                                     <td>{$foo["date_begin"]}</td>
                                     <td>{$foo["date_end"]}</td>
+                                    <td><a href="application/requests/user.php?printOrder={$foo['id_order']}">Просмотреть</a></td>
                                 </tr>
                             {/foreach}
 
