@@ -31,7 +31,7 @@ class Binding {
 }
 
 function printResponse(json, element) {
-    if (element==undefined){
+    if (element===undefined){
         return;
     }
     element.innerHTML = "";

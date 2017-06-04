@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 {include 'head.tpl'}
+
 <body>
 {include 'nav.tpl'}
 {capture name=content}
@@ -55,7 +56,8 @@
                                     <td>{$foo["brand"]}</td>
                                     <td>{$foo["model"]}</td>
                                     <td>
-                                        <a data-toggle="modal" data-target="#{$foo["id_order"]}Modal"> Местоположение</a>
+                                        <a data-toggle="modal" data-target="#{$foo["id_order"]}Modal">
+                                            Просмотр</a>
                                     </td>
                                     <!-- Modal Order !-->
                                     <div class="modal fade" id="{$foo["id_order"]}Modal" role="dialog">
@@ -64,11 +66,13 @@
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal">&times;
                                                     </button>
-                                                    <h4 class="modal-title">Местоположение машины: {$foo["brand"]}-{$foo["model"]}</h4>
+                                                    <h4 class="modal-title">Местоположение машины: {$foo["brand"]}
+                                                        -{$foo["model"]}</h4>
                                                 </div>
                                                 <div class="modal-body">
                                                     <p
-                                                    <div id="map-{$foo["id_order"]}" style="width: auto; height: 400px"></div>
+                                                    <div id="map-{$foo["id_order"]}"
+                                                         style="width: auto; height: 400px"></div>
                                                     <script>
                                                         ymaps.ready(init);
                                                         var map;
@@ -112,6 +116,7 @@
             </div>
         </div>
     </div>
+
     <script>
         $('[data-toggle="tooltip"]').tooltip();
     </script>

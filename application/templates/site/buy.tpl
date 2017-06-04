@@ -35,7 +35,13 @@
                 </div>
 
             </div>
-
+            <div id="dialog" title="Плохая дата">
+                <p>Бронь доступна максимум за 3 дня от сегодня</p>
+            </div>
+            <script>
+                $("#dialog").dialog();
+                $("#dialog").dialog("close");
+            </script>
         </div>
     </div>
 {/capture}

@@ -118,7 +118,7 @@ class Order {
                             console.log(element);
                             self.home.appendChild(self.datePicker);
                             $('#datePicker').datepicker({
-                                minDate: new Date(new Date().setDate(new Date().getDate() + 1)),
+                                minDate: new Date(),
                                 language: {
                                     dateFormat: 'yyyy-mm-dd'
                                 },
@@ -126,10 +126,23 @@ class Order {
                                     if (date.length != 2) {
                                         self.price.remove()
                                     } else {
+                                        if ((date[0].getMonth()+date[0].getYear()+date[0].getDate())>
+                                            (new Date().getYear()+new Date().getMonth()+new Date().getDate()+3)){
+                                            console.log("bad date");
+                                            var panelInfo = document.createElement("div");
+                                            panelInfo.className = "";
+                                            self.price.innerHTML="";
+                                            self.price.appendChild(panelInfo);
+                                                $("#dialog" ).dialog();
+
+
+                                            return;
+                                        }
+
                                         //console.log(date);
                                         var timeDiff = Math.abs(date[1].getTime() - date[0].getTime());
                                         var day = (Math.ceil(timeDiff / (1000 * 3600 * 24)) + 1);
-                                        self.price.innerHTML = "Цена за " + day + " дней, составляет " + element["cost_per_day"] * day + " <span class='glyphicon glyphicon-ruble'> </span>";
+                                        self.price.innerHTML = "Цена за " + day + " дней, составляет " + element["cost_per_day"] * day + " <span class='glyphicon glyphicon-ruble'> </span> ";
                                         var btnBuy = document.createElement("a");
                                         btnBuy.innerHTML = "Купить";
                                         btnBuy.onclick = function () {
@@ -144,13 +157,13 @@ class Order {
                                             }));
                                             xhr.open("POST", "/cars/application/requests/user.php");
                                             xhr.onreadystatechange = function () {
-                                                if (this.readyState == 4 && this.status == 200) {
+                                                if (this.readyState === 4 && this.status === 200) {
                                                     self.price.innerHTML = "";
                                                     var panelInfo = document.createElement("div");
-                                                    panelInfo.className = ""
+                                                    panelInfo.className = "";
                                                     var responseJSON = JSON.parse(this.responseText);
+                                                    console.log(responseJSON);
                                                     printResponse(responseJSON, panelInfo);
-                                                    console.log(this.responseText);
                                                     self.price.appendChild(panelInfo);
                                                 }
                                             };
