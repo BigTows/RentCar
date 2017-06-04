@@ -77,13 +77,18 @@ if (isset($_POST['getProfile'])) {
                 <div class="bs-callout bs-callout-info" id="callout-type-b-i-elems">
                     <h4>Информация о заказе</h4>
                     <p>
-                       Автомобиль <span><?php echo $row['brand'] . " " . $row['model'] ?></span>
+                        Автомобиль <span><?php echo $row['brand'] . " " . $row['model'] ?></span>
                     <hr>
                     <span>Даты аренты автомобиля (Начало - Конец)<br> <?php echo $row['date_begin'] . " - " . $row['date_end'] ?></span>
                     <hr>
                     <span>Стоимость: <?php echo $row['coast'] ?></span>
                     <hr>
                     </p>
+                    <span>
+                        <a href="#" class="thumbnail">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://194.87.239.206/cars/profile">
+                        </a>
+                    </span>
                 </div>
             </div>
 
