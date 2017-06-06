@@ -14,10 +14,12 @@
             </div>
             <div class="media-body">
                 <div class="media-heading"><h4>{$foo["brand"]}</h4></div>
-                <p>{$foo["model"]}</p>
+                <p>{$foo["model"]}
+                <hr>
+                <p>Описание: {$foo["description"]}</p></p>
             </div>
-            <div class="media-right">
-                <p>{$foo["description"]}</p>
+            <div class="media-center">
+
             </div>
         </div>
         <hr>
